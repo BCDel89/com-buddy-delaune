@@ -1,0 +1,46 @@
+{
+  "name": "buddy-delaune",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others  \"webpack-dev-server --open\" \"npm run watch\"",
+    "server": "node server.js",
+    "webpack:build": "webpack --env.NODE_ENV=local --env.development",
+    "webpack:watch": "npm run webpack:build -- --watch --debug",
+    "sass:build": "node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js --output-style compressed src/main.scss --output dist",
+    "sass:watch": "onchange --initial --verbose --delay 500 \"src/**/*.scss\" -- npm run sass:build",
+    "build": "npm run webpack:build && npm run sass:build",
+    "watch": "concurrently \"npm run webpack:watch\" \"npm run sass:watch\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcd-web-components": "^1.0.3",
+    "bootstrap": "^3.4.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.152",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.5.3",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "node-sass-magic-importer": "^5.3.2",
+    "onchange": "^7.0.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
