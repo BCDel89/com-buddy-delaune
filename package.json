@@ -1,6 +1,6 @@
 {
   "name": "buddy-delaune",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -13,7 +13,13 @@
     "sass:build": "node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js --output-style compressed src/main.scss --output dist",
     "sass:watch": "onchange --initial --verbose --delay 500 \"src/**/*.scss\" -- npm run sass:build",
     "build": "npm run webpack:build && npm run sass:build",
-    "watch": "concurrently \"npm run webpack:watch\" \"npm run sass:watch\""
+    "watch": "concurrently \"npm run webpack:watch\" \"npm run sass:watch\"",
+    "release:prepare": "node ./scripts/release-prepare.js",
+    "release:publish": "node ./scripts/release-publish.js",
+    "web:clean": "rimraf ../com-buddy-delaune-build/www/",
+    "web:copy": "cp -R dist/ ../com-buddy-delaune-build/www/",
+    "web:release": "node ./scripts/release-build.js --buildPath=\"../com-buddy-delaune-build\"",
+    "bump": "npm run release:prepare -- --release-as patch && npm run build && npm run release:publish"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +39,7 @@
     "node-sass": "^4.14.1",
     "node-sass-magic-importer": "^5.3.2",
     "onchange": "^7.0.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
