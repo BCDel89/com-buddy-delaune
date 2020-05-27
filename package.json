@@ -1,6 +1,6 @@
 {
   "name": "buddy-delaune",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -18,8 +18,8 @@
     "release:publish": "node ./scripts/release-publish.js",
     "web:clean": "rimraf ../com-buddy-delaune-build/www/",
     "web:copy": "cp -R dist/ ../com-buddy-delaune-build/www/",
-    "web:release": "node ./scripts/release-build.js --buildPath=\"../com-buddy-delaune-build\"",
-    "bump": "npm run release:prepare -- --release-as patch && npm run build && npm run release:publish"
+    "web:release": "npm run web:clean && npm run web:copy && node ./scripts/release-build.js --buildPath=\"../com-buddy-delaune-build\"",
+    "bump": "npm run release:prepare -- --release-as patch && npm run build && npm run release:publish && npm run web:release"
   },
   "author": "",
   "license": "ISC",
