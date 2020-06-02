@@ -26,17 +26,20 @@ $lightgray: rgb(240, 240, 240);
 html {
   background: rgb(5, 5, 5);
   scroll-behavior: smooth;
+  margin-top: -8px;
 }
 
 body {
   position: relative;
-  background: url("assets/img/bkg-pattern-dark-light-split.jpg") no-repeat center center fixed;
+  //background: url("assets/img/bkg-pattern-dark-light-split.jpg") no-repeat center center fixed;
   //background: url("assets/img/bkg-forest.jpg") no-repeat center center fixed;
+  background: url("assets/img/nola-2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Roboto, Thin';
+  width: 100%;
 }
 
 .affix {
@@ -56,7 +59,7 @@ body {
     min-width: 300px;
     max-width: 850px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     top: 20px;
     padding: 10px;
     border-radius: 25px;
@@ -80,39 +83,87 @@ body {
   .site-wrapper-inner {
 
     .cover-container {
+      position: relative;
       height: 100vh;
       margin: 0 auto;
-      padding-top: 30vh;
-      width: 55%;
-      min-width: 300px;
       text-align: center;
-      color: white;
       font-weight: 300;
+
+      .glass-panel-bkg, .glass-panel {
+        max-width: 600px;
+        max-height: 600px;
+        min-width: 350px;
+        min-height: 350px;
+        $size: 60vw;
+        width: $size;
+        height: $size;
+        z-index: 99;
+      }
+
+      .glass-panel-bkg {
+        position: absolute;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        backdrop-filter: blur(3px);
+        background-color: rgba(white, 0.75);
+        //background-color: rgba(black, 0.85);
+        //border-radius: 10px;
+        //border-radius: 50% 50% 0 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+
+      .glass-panel {
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $gray-gradient;
+        //color: white;
+
+        &-content {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        h1 {
+          display: inline-block;
+          margin-bottom: 20px;
+        }
+
+        .scroll-to-arrow {
+          border: 2px solid white;
+          background-image: $gray-gradient;
+          position: absolute;
+          padding: 5px;
+          width: 40px;
+          height: 40px;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+
+          i {
+            color: white;
+            height: 100%;
+            line-height: 100%;
+            padding-top: 6px;
+            vertical-align: middle;
+            transform: rotate(-45deg);
+          }
+        }
+
+        .scroll-to-arrow:hover {
+          border: 3px solid $lightgray;
+        }
+
+        .scroll-to-arrow:focus, .scroll-to-arrow:active {
+          outline: none;
+        }
+      }
+
     }
 
-  }
-
-  .scroll-to-arrow {
-    border-radius: 50%;
-    border: 2px solid white;
-    background-image: $gray-gradient;
-    position: relative;
-    top: 15vh;
-
-    i {
-      color: white;
-      height: 100%;
-      line-height: 100%;
-      vertical-align: middle;
-    }
-  }
-
-  .scroll-to-arrow:hover {
-    border: 3px solid $lightgray;
-  }
-
-  .scroll-to-arrow:focus, .scroll-to-arrow:active {
-    outline: none;
   }
 }
 
@@ -123,11 +174,12 @@ body {
 }
 
 .resume {
-  $menuSize: 250px;
+  $menuSize: 280px;
 
   .resume-menu {
     //float: left;
     min-width: $menuSize;
+    max-width: $menuSize;
     width: $menuSize;
     height: 100vh;
     background-image: $gray-gradient;
@@ -148,7 +200,7 @@ body {
       margin-bottom: 7vh;
       font-size: 19px;
       text-transform: uppercase;
-      font-weight: 200;
+      color: white;
     }
 
     a {
@@ -167,7 +219,30 @@ body {
         margin-left: 40px;
         font-size: 14.5px;
         //margin-top: 1.5vh;
+        transition-duration: .25s;
+        transition-property: all;
       }
+    }
+
+    .sub-menu {
+      height: 0;
+      overflow: hidden;
+      transition: 2s;
+      transition-property: all;
+
+      .menu-btn {
+        height: 35px;
+        line-height: 35px;
+        font-size: 13.5px;
+        margin-left: 55px;
+      }
+      .menu-btn:before {
+        content: '\2022';
+      }
+    }
+
+    .sub-menu.sub-menu-full {
+      height: auto;
     }
 
     a:focus, a:active, .menu-btn-focused {
@@ -197,6 +272,14 @@ body {
     height: auto;
     overflow-y: scroll;
     padding: 0;
+
+    .user-icon:hover {
+      @extend .tran-fun;
+    }
+
+    h3:hover {
+      @extend .tran-grow
+    }
 
     .resume-personal-info,
     .resume-experience,
@@ -255,6 +338,10 @@ body {
     }
 
     .resume-experience {
+      .row {
+        margin-bottom: 40px;
+        padding-top: 40px;
+      }
       .col-3 {
         font-style: italic;
       }
@@ -265,7 +352,7 @@ body {
         }
 
         .job-description {
-          font-size: 12.5px;
+          font-size: 13.5px;
         }
       }
     }
@@ -312,6 +399,7 @@ body {
         min-width: 300px;
         max-width: 850px;
         margin: 0 auto;
+        transition: all .25s;
 
         .col-lang {
           text-align: left;
@@ -343,6 +431,7 @@ body {
         font-weight: 900;
         font-size: 17px;
         --bcd-rating-size: 40px;
+        transform: scale(1.1);
       }
     }
 
@@ -402,4 +491,165 @@ body {
 
 .text-right {
   text-align: right;
+}
+
+.ds-base {
+  transition: opacity 1.5s, bottom 1.5s;
+  position: relative;
+  opacity: 0;
+  bottom: -50px;
+}
+
+.ds-base-in {
+  bottom: 0;
+  opacity: 1;
+}
+
+.ds-base-out {
+  bottom: 0;
+  opacity: 0;
+}
+
+p[data-scroll], h3[data-scroll] {
+  @extend .ds-base;
+}
+
+p[data-scroll="in"], h3[data-scroll="in"] {
+  @extend .ds-base-in;
+}
+
+p[data-scroll="out"], h3[data-scroll="out"] {
+  @extend .ds-base-out;
+}
+
+.resume-content {
+  [data-scroll] {
+    .row {
+      div, p {
+        @extend .ds-base;
+      }
+    }
+  }
+
+  [data-scroll="in"] {
+    .row {
+      div, p {
+        @extend .ds-base-in;
+      }
+    }
+  }
+
+  [data-scroll="out"] {
+    .row {
+      div, p {
+        @extend .ds-base-out;
+      }
+    }
+  }
+}
+
+.anim-slide-up {
+  position: relative;
+  bottom: -50px;
+  opacity: 0;
+  animation-name: kf-slide-up;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+.anim-typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: kf-typing 3.5s steps(40, end), kf-blink-caret .75s step-end infinite;
+}
+
+.anim-pulse {
+  transform: scale(1);
+  animation: kf-pulse-sa 2s infinite;
+}
+
+.anim-fun {
+  animation-name: kf-fun;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.tran-grow {
+  transition: .5s;
+}
+
+.tran-grow:hover {
+  transform: scale(1.025);
+  text-shadow: 1px 1px 1px rgba(black, 0.2);
+}
+
+.tran-fun {
+  transition: .5s;
+}
+
+.tran-fun:hover {
+  transform: rotate(360deg) scale(1.15);
+  box-shadow: 1px 1px 3px rgba(black, 0.8);
+}
+
+@keyframes kf-slide-up {
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* The typing effect */
+@keyframes kf-typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes kf-blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #28fe13;
+  }
+}
+
+@keyframes kf-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes kf-pulse-sa {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(45deg);
+
+  }
+  50% {
+    transform: translateX(-50%) scale(1.15) rotate(45deg);
+  }
+}
+
+@keyframes kf-fun {
+  0% {
+
+  }
+  90% {
+    transform: rotate(360deg) scale(1.15);
+    box-shadow: 1px 1px 2px #888888;
+  }
 }

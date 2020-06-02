@@ -10,7 +10,7 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="./main.css">
-	<link rel="icon" type="image/png" href="./assets/img/favIcon@64.png">
+    <link rel="icon" type="image/png" href="./assets/img/favIcon@64.png">
     <title>Buddy C Delaune</title>
 </head>
 
@@ -30,13 +30,14 @@
 <script src="https://kit.fontawesome.com/ab868b7962.js" crossorigin="anonymous"></script>
 <script type="module"
         src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script src="/bundle.js"></script>
 
 
 <div id="site-wrapper" class="site-wrapper full-height">
     <div class="bkg"></div>
 
-    <div class="site-wrapper-inner">
+    <div class="site-wrapper-inner" id="cover">
         <nav style="visibility: hidden">
             <ul class="nav masthead-nav row">
                 <div class="col-3">
@@ -62,22 +63,28 @@
                 </div>
             </div>
 
-            <div>
-                <h1>Buddy Delaune</h1>
-                <br>
-                <p>
-                    An experienced Full-Stack Software Engineer/Engineering Manager with a demonstrated history of working
-                    in the computer software industry. Skilled in Mobile & Web Applications, Cloud Infrastructure &
-                    Development, Database Design and Administration, team management, and more with a Bachelor of
-                    Science (B.S.) focused in Computer Science from Louisiana State University.
-                </p>
+            <div class="glass-panel-bkg"> </div>
+            <div class="glass-panel">
+                <div class="glass-panel-content">
+
+                    <h1 class="">Buddy Delaune</h1>
+                    <br>
+                    <p data-scroll class="d-none d-md-block">
+                        An experienced Full-Stack Software Engineer/Engineering Manager with a demonstrated history of
+                        working
+                        in the computer software industry. Skilled in Mobile & Web Applications, Cloud Infrastructure &
+                        Development, Database Design and Administration, team management, and more with a Bachelor of
+                        Science (B.S.) focused in Computer Science from Louisiana State University.
+                    </p>
+                </div>
+
+                <a href="#resume">
+                    <button class="scroll-to-arrow anim-pulse">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
             </div>
 
-            <a href="#resume">
-                <button class="scroll-to-arrow">
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-            </a>
         </div>
 
         <div></div>
@@ -85,11 +92,14 @@
         <div class="row resume" id="resume">
             <div class="resume-menu sticky d-none d-sm-none d-md-block col-3" id="resumemenu">
 
-                <div class="profile">
-                    <img src="assets/img/profile.png" alt="Profile Picture">
-                </div>
+                <a href="#cover">
+                    <div class="profile">
+                        <img src="assets/img/profile.png" alt="Profile Picture">
+                    </div>
 
-                <h4 id="resume-menu-name">Buddy Delaune</h4>
+                    <h4 id="resume-menu-name">Buddy Delaune</h4>
+                </a>
+
 
                 <a tabindex="0" href="#info" id="nav-btn-info">
                     <div class="menu-btn">
@@ -108,6 +118,34 @@
                         Work Experience
                     </div>
                 </a>
+
+                <div class="sub-menu">
+                    <a tabindex="3" href="#experience-leviton" id="nav-btn-experience-leviton">
+                        <div class="menu-btn">
+                            Leviton
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-urs" id="nav-btn-experience-urs">
+                        <div class="menu-btn">
+                            AECOM/URS
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-ba" id="nav-btn-experience-ba">
+                        <div class="menu-btn">
+                            B&A Technologies
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-xennex" id="nav-btn-experience-xennex">
+                        <div class="menu-btn">
+                            XenneX LLC
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-ab" id="nav-btn-experience-ab">
+                        <div class="menu-btn">
+                            Amies Boutique
+                        </div>
+                    </a>
+                </div>
 
                 <a tabindex="3" href="#skills" id="nav-btn-skills">
                     <div class="menu-btn">
@@ -137,13 +175,13 @@
 
             <div class="resume-content col" data-spy="scroll" data-target="#resumemenu" data-offset="0">
 
-                <div class="full-height resume-personal-info" id="info">
+                <div data-scroll class="full-height resume-personal-info" id="info">
 
-<!--                    <a href="#site-wrapper">-->
-<!--                        <button class="scroll-to-arrow scroll-to-top-arrow sticky-top">-->
-<!--                            <i class="fas fa-chevron-up"></i>-->
-<!--                        </button>-->
-<!--                    </a>-->
+                    <!--                    <a href="#site-wrapper">-->
+                    <!--                        <button class="scroll-to-arrow scroll-to-top-arrow sticky-top">-->
+                    <!--                            <i class="fas fa-chevron-up"></i>-->
+                    <!--                        </button>-->
+                    <!--                    </a>-->
 
                     <div class="user-icon">
                         <svg class="bi bi-person-fill" width="50px" height="50px" viewBox="0 0 16 16"
@@ -194,7 +232,7 @@
 
                 </div>
 
-                <div class="full-height resume-education" id="education">
+                <div data-scroll class="full-height resume-education" id="education">
                     <div class="user-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -238,14 +276,14 @@
 
                 </div>
 
-                <div class="full-height resume-experience" id="experience">
+                <div data-scroll class="full-height resume-experience" id="experience">
                     <div class="user-icon">
                         <i class="fas fa-building"></i>
                     </div>
 
                     <h3>Work Experience</h3>
 
-                    <div class="row">
+                    <div class="row" id="experience-leviton">
                         <div class="col-3">
                             May 2015 - present
                         </div>
@@ -255,25 +293,30 @@
                             </div>
                             <div class="job-title">
                                 <div>
-                                    <i>[2019 - present]</i> -  Software Engineering Manager / Software Engineer
+                                    <i>[2019 - present]</i> - Software Engineering Manager / Software Engineer
                                 </div>
                                 <div>
                                     <i>[2015 - 2019]</i> - Full Stack Software Engineer
                                 </div>
                             </div>
                             <p class="job-description">
-                                Work closely with product managers and UX designers to design, develop, and implement the smart
+                                Work closely with product managers and UX designers to design, develop, and implement
+                                the smart
                                 home technology needs of the market and our customers all around the world
-                                using cutting edge technologies. Front-end work consists of creating dynamic mobile and web
-                                applications that can communicate with devices through means of Bluetooth, Wi-Fi, and various RF protocols, but
+                                using cutting edge technologies. Front-end work consists of creating dynamic mobile and
+                                web
+                                applications that can communicate with devices through means of Bluetooth, Wi-Fi, and
+                                various RF protocols, but
                                 also to Leviton Cloud Services via RESTful APIs. Back-end work consists of
-                                creating new cloud service APIs, client libraries, and developing new integrations with other
-                                Smart Home Technology partners including but not limited to Samsung, Google, Amazon, and Apple.
+                                creating new cloud service APIs, client libraries, and developing new integrations with
+                                other
+                                Smart Home Technology partners including but not limited to Samsung, Google, Amazon, and
+                                Apple.
                             </p>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row" id="experience-urs">
                         <div class="col-3">
                             July 2013 - May-2015
                         </div>
@@ -298,7 +341,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row" id="experience-ba">
 
                         <div class="col-3">
                             December 2015 - present
@@ -311,7 +354,7 @@
                             <div class="job-title">
                                 Co-founder/CTO/Lead Full Stack Developer
                             </div>
-                            <p class="job-description">
+                            <p data-scroll class="job-description">
                                 Mobile/Web application development. Front-end technologies include: Lua, Cordova, html,
                                 CSS, Sass, AngularJs. Back-end technologies include: GCP, Datastore, and python. Notable
                                 Project:
@@ -320,7 +363,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row" id="experience-xennex">
 
                         <div class="col-3">
                             2014 - present
@@ -334,7 +377,7 @@
                             <div class="job-title">
                                 Founder/Full Stack Developer
                             </div>
-                            <p class="job-description">
+                            <p data-scroll class="job-description">
                                 Sole Designer and Developer for mobile applications published for GooglePlay, iTunes,
                                 and the Amazon Store. Front end technologies used included: Lua, Html, CSS, Sass,
                                 AngularJs, Cordova, Ionic. GCP, and python were used for cloud/server side development,
@@ -346,7 +389,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row" id="experience-ab">
 
                         <div class="col-3">
                             2009 - 2013
@@ -360,7 +403,7 @@
                             <div class="job-title">
                                 Graphic Designer/IT Admin
                             </div>
-                            <p class="job-description">
+                            <p data-scroll class="job-description">
                                 Planned and formulated IT policies/security standards, helped design data storage
                                 solutions for inventory tracking, and worked one-on-one with owners to develop logo
                                 designs, custom illustrations, ads, and website designs.
@@ -378,7 +421,7 @@
 
                     <h3>Skills</h3>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                             <div class="rating-circle-block">
                                 <h4>Software Management</h4>
@@ -525,7 +568,7 @@
 
                     <h3>Languages & Frameworks</h3>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Javascript
                         </div>
@@ -534,7 +577,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Typescript
                         </div>
@@ -543,7 +586,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             NodeJs
                         </div>
@@ -552,7 +595,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Ionic
                         </div>
@@ -561,7 +604,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Angular
                         </div>
@@ -570,7 +613,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Java
                         </div>
@@ -579,7 +622,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             c#
                         </div>
@@ -588,7 +631,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Bash
                         </div>
@@ -597,7 +640,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             MySql
                         </div>
@@ -606,7 +649,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Lua
                         </div>
@@ -615,7 +658,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Python
                         </div>
@@ -624,7 +667,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Objective-C
                         </div>
@@ -633,7 +676,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Swift
                         </div>
@@ -642,7 +685,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             Bootstrap
                         </div>
@@ -651,7 +694,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div data-scroll class="row">
                         <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
                             ReactJs
                         </div>
@@ -670,14 +713,16 @@
                     <h3>Tools & Technologies</h3>
 
                     <div class="row text-center">
-                        GCP, AWS,
-                        Git, svn,
-                        Intermediate Networking,
-                        Web Components, Apache, nginx, Wordpress
-                        Vim, Illustrator, Photoshop,
-                        Various database solutions (including MySql, MongoDb, NoSql, Datastore),
-                        Various Package Managers (including npm, bower, homebrew, apt),
-                        Various Desktop & Mobile Operating Systems (including Linux, Windows, MacOs, Android, iOS),
+                        <p data-scroll>
+                            GCP, AWS,
+                            Git, svn,
+                            Intermediate Networking,
+                            Web Components, Apache, nginx, Wordpress
+                            Vim, Illustrator, Photoshop,
+                            Various database solutions (including MySql, MongoDb, NoSql, Datastore),
+                            Various Package Managers (including npm, bower, homebrew, apt),
+                            Various Desktop & Mobile Operating Systems (including Linux, Windows, MacOs, Android, iOS),
+                        </p>
                     </div>
                 </div>
 
@@ -688,7 +733,7 @@
 
                     <h3>References</h3>
 
-                    <h4>
+                    <h4 data-scroll>
                         References available upon request.
                     </h4>
 
@@ -701,57 +746,6 @@
     </div>
 
 </div>
-
-<script>
-	const clearMenuFocus = () => {
-		$('.menu-btn-focused').removeClass('menu-btn-focused');
-	};
-
-	const handleObserverEvent = (entries, observer) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				console.log('entry', entry);
-
-				const id = entry.target.id;
-				const element = $('#nav-btn-' + id);
-
-				if (element) {
-					console.log('element: ', element);
-					clearMenuFocus();
-					element.addClass('menu-btn-focused');
-					// element.focus();
-				}
-			}
-		})
-	};
-
-	const createObserver = () => {
-		let options = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.80
-			// threshold: 0.385
-		};
-
-
-		let observer = new IntersectionObserver((entries, observer) => handleObserverEvent(entries), options);
-
-		observer.observe(document.querySelector('#info'));
-		observer.observe(document.querySelector('#education'));
-		observer.observe(document.querySelector('#experience'));
-		observer.observe(document.querySelector('#skills'));
-		observer.observe(document.querySelector('#languages'));
-		observer.observe(document.querySelector('#technology'));
-		observer.observe(document.querySelector('#references'));
-
-	};
-
-	// Set things up
-	window.addEventListener("load", (event) => {
-		createObserver();
-	}, false);
-</script>
-
 </body>
 
 </html>
