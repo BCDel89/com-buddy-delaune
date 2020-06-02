@@ -32,7 +32,7 @@ const createObserver = () => {
 	let options = {
 		root: null,
 		rootMargin: '0px',
-		threshold: 0.85
+		threshold: 0.80
 		// threshold: 0.385
 	};
 
