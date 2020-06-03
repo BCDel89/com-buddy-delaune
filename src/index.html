@@ -65,6 +65,19 @@
             </a>
         </nav>
 
+        <nav class="nav nav-right nav-right-print">
+            <a href="">
+                <div onclick="print()">
+                    <i class="fas fa-print"></i>
+                </div>
+            </a>
+            <a href="">
+                <div id="printBtn" onclick="onPrint()">
+                    <i class="fas fa-share"></i>
+                </div>
+            </a>
+        </nav>
+
         <div class="cover-container">
 
             <div>
@@ -441,7 +454,7 @@
                     </div>
                 </div>
 
-                <div class="full-height resume-skills" id="skills">
+                <div class="full-height resume-skills" id="skills" data-scroll>
                     <div class="resume-content-container">
                         <div class="user-icon">
                             <i class="fas fa-balance-scale-left"></i>
@@ -453,7 +466,7 @@
                             <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                 <div class="rating-circle-block">
                                     <h4>Software Management</h4>
-                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                    <bcd-rating-circle fraction="true" size="md" rating="8" max="10"></bcd-rating-circle>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
@@ -508,7 +521,7 @@
                     </div>
                 </div>
 
-                <div class="full-height resume-languages" id="languages">
+                <div class="full-height resume-languages" id="languages" data-scroll>
                     <div class="resume-content-container">
                         <div class="user-icon">
                             <i class="fas fa-code"></i>
@@ -654,7 +667,7 @@
                     </div>
                 </div>
 
-                <div class="full-height resume-technology" id="technology">
+                <div class="full-height resume-technology" id="technology" data-scroll>
                     <div class="resume-content-container">
                         <div class="user-icon">
                             <i class="fas fa-tools"></i>
@@ -678,7 +691,7 @@
                     </div>
                 </div>
 
-                <div class="full-height resume-references" id="references">
+                <div class="full-height resume-references" id="references" data-scroll>
                     <div class="resume-content-container">
                         <div class="user-icon">
                             <i class="fas fa-envelope"></i>

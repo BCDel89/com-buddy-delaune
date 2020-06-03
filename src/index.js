@@ -66,10 +66,15 @@ window.addEventListener("load", (event) => {
 const initialize = () => {
 	createObserver();
 	ScrollOut({
-		once: true
+		offset: 0
 	});
 
-	// document.getElementById('printBtn').addEventListener('click', onPrint);
+	ScrollOut({
+		targets: ".nav-right-print",
+		offset: window.innerHeight
+	});
+
+	document.getElementById('printBtn').addEventListener('click', onPrint);
 };
 
 function onPrint() {
