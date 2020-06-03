@@ -1,3 +1,6 @@
+import './main.scss';
+import './pdf.scss';
+
 const clearMenuFocus = () => {
 	$('.menu-btn-focused').removeClass('menu-btn-focused');
 };
@@ -59,9 +62,34 @@ window.addEventListener("load", (event) => {
 	initialize();
 }, false);
 
+
 const initialize = () => {
 	createObserver();
 	ScrollOut({
 		once: true
 	});
+
+	// document.getElementById('printBtn').addEventListener('click', onPrint);
 };
+
+function onPrint() {
+	// doc.save('buddycdelaune_resume.pdf');
+
+	const doc = new jsPDF('p', 'in', 'letter');
+	const source = $('html')[0].innerHTML;
+
+	console.log('on print', source);
+
+	doc.fromHTML(
+	source, // HTML string or DOM elem ref.
+	0.5,    // x coord
+	0.5,    // y coord
+	{
+		'width': 7.5, // max width of content on PDF
+	});
+
+	// doc.output('dataurl');
+	doc.save();
+}
+
+

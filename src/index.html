@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.min.css">
+    <link rel="stylesheet" type="text/css" media="print" href="./print.min.css">
     <link rel="icon" type="image/png" href="./assets/img/favIcon@64.png">
     <title>Buddy C Delaune</title>
 </head>
@@ -27,688 +28,674 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 <script src="https://kit.fontawesome.com/ab868b7962.js" crossorigin="anonymous"></script>
 <script type="module"
         src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script src="/bundle.js"></script>
 
-    <div id="site-wrapper" class="site-wrapper full-height pdf">
+<div id="site-wrapper" class="site-wrapper full-height">
 
-        <div class="site-wrapper-inner" id="cover">
-            <nav class="nav-left">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="#resumemenu">
-                            <button class="btn btn-link">
-                                Resume
-                            </button>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"> Portfolio </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">Quote</a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
-            </nav>
-
-            <nav class="nav-right">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="#resumemenu">
-                            <button class="btn btn-link">
-                                Resume
-                            </button>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"> Portfolio </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">Quote</a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="cover-container">
-
-                <div>
+    <div class="site-wrapper-inner" id="cover">
+        <nav class="nav nav-left" data-scroll>
+            <div class="row">
+                <a href="#resumemenu">
+                    <div> Resume</div>
+                </a>
+                <a href="#cover">
+                    <div> Portfolio</div>
+                </a>
+                <a href="#cover">
                     <div>
-                        <h1 class="masthead-brand"></h1>
+                        Quote
                     </div>
+                </a>
+            </div>
+        </nav>
+
+        <nav class="nav nav-right" data-scroll>
+            <a href="">
+                <div onclick="print()"> Print </div>
+            </a>
+            <a href="#">
+                <div>
+                    Contact
+                </div>
+            </a>
+        </nav>
+
+        <div class="cover-container">
+
+            <div>
+                <div>
+                    <h1 class="masthead-brand"></h1>
+                </div>
+            </div>
+
+            <div class="glass-panel-bkg"></div>
+            <div class="glass-panel">
+                <div class="glass-panel-content">
+
+                    <h1 class="">Buddy Delaune</h1>
+                    <br>
+                    <p data-scroll class="d-none d-md-block">
+                        An experienced Full-Stack Software Engineer/Engineering Manager with a demonstrated history of
+                        working
+                        in the computer software industry. Skilled in Mobile & Web Applications, Cloud Infrastructure &
+                        Development, Database Design and Administration, team management, and more with a Bachelor of
+                        Science (B.S.) focused in Computer Science from Louisiana State University.
+                    </p>
                 </div>
 
-                <div class="glass-panel-bkg"></div>
-                <div class="glass-panel">
-                    <div class="glass-panel-content">
+                <a href="#resume">
+                    <button class="scroll-to-arrow anim-pulse-sa">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
+            </div>
 
-                        <h1 class="">Buddy Delaune</h1>
-                        <br>
-                        <p data-scroll class="d-none d-md-block">
-                            An experienced Full-Stack Software Engineer/Engineering Manager with a demonstrated history of
-                            working
-                            in the computer software industry. Skilled in Mobile & Web Applications, Cloud Infrastructure &
-                            Development, Database Design and Administration, team management, and more with a Bachelor of
-                            Science (B.S.) focused in Computer Science from Louisiana State University.
-                        </p>
+        </div>
+
+        <div></div>
+
+        <div class="row resume" id="resume">
+            <div class="resume-menu sticky d-none d-sm-none d-md-block col-3" id="resumemenu">
+
+                <a href="#cover">
+                    <div class="profile">
+                        <img src="assets/img/profile.png" alt="Profile Picture">
                     </div>
 
-                    <a href="#resume">
-                        <button class="scroll-to-arrow anim-pulse-sa">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                    <h4 id="resume-menu-name">Buddy Delaune</h4>
+                </a>
+
+
+                <a tabindex="0" href="#info" id="nav-btn-info">
+                    <div class="menu-btn">
+                        Personal Info
+                    </div>
+                </a>
+
+                <a tabindex="1" href="#education" id="nav-btn-education">
+                    <div class="menu-btn">
+                        Education
+                    </div>
+                </a>
+
+                <a tabindex="2" href="#experience" id="nav-btn-experience">
+                    <div class="menu-btn">
+                        Work Experience
+                    </div>
+                </a>
+
+                <div class="sub-menu">
+                    <a tabindex="3" href="#experience-leviton" id="nav-btn-experience-leviton">
+                        <div class="menu-btn">
+                            Leviton
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-urs" id="nav-btn-experience-urs">
+                        <div class="menu-btn">
+                            AECOM/URS
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-ba" id="nav-btn-experience-ba">
+                        <div class="menu-btn">
+                            B&A Technologies
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-xennex" id="nav-btn-experience-xennex">
+                        <div class="menu-btn">
+                            XenneX LLC
+                        </div>
+                    </a>
+                    <a tabindex="3" href="#experience-ab" id="nav-btn-experience-ab">
+                        <div class="menu-btn">
+                            Amies Boutique
+                        </div>
                     </a>
                 </div>
+
+                <a tabindex="3" href="#skills" id="nav-btn-skills">
+                    <div class="menu-btn">
+                        Skills
+                    </div>
+                </a>
+
+                <a tabindex="4" href="#languages" id="nav-btn-languages">
+                    <div class="menu-btn">
+                        Languages & Frameworks
+                    </div>
+                </a>
+
+                <a tabindex="5" href="#technology" id="nav-btn-technology">
+                    <div class="menu-btn">
+                        Tools & Technology
+                    </div>
+                </a>
+
+                <a tabindex="6" href="#references" id="nav-btn-references">
+                    <div class="menu-btn">
+                        References
+                    </div>
+                </a>
 
             </div>
 
-            <div></div>
+            <div class="resume-content col" data-spy="scroll" data-target="#resumemenu" data-offset="0">
 
-            <div class="row resume" id="resume">
-                <div class="resume-menu sticky d-none d-sm-none d-md-block col-3" id="resumemenu">
+                <div data-scroll class="full-height resume-personal-info" id="info">
 
-                    <a href="#cover">
-                        <div class="profile">
-                            <img src="assets/img/profile.png" alt="Profile Picture">
+                    <div class="resume-content-container">
+
+                        <!--                    <a href="#site-wrapper">-->
+                        <!--                        <button class="scroll-to-arrow scroll-to-top-arrow sticky-top">-->
+                        <!--                            <i class="fas fa-chevron-up"></i>-->
+                        <!--                        </button>-->
+                        <!--                    </a>-->
+
+                        <div class="user-icon">
+                            <svg class="bi bi-person-fill" width="50px" height="50px" viewBox="0 0 16 16"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+                                      clip-rule="evenodd"/>
+                            </svg>
                         </div>
 
-                        <h4 id="resume-menu-name">Buddy Delaune</h4>
-                    </a>
+                        <h3>Personal Information</h3>
 
-
-                    <a tabindex="0" href="#info" id="nav-btn-info">
-                        <div class="menu-btn">
-                            Personal Info
+                        <div class="row">
+                            <div class="row-key">
+                                Address
+                            </div>
+                            <div class="row-value">
+                                6108 Marigny St, New Orleans, Louisiana 70122
+                            </div>
                         </div>
-                    </a>
 
-                    <a tabindex="1" href="#education" id="nav-btn-education">
-                        <div class="menu-btn">
-                            Education
+                        <div class="row">
+                            <div class="row-key">
+                                Cell Phone
+                            </div>
+                            <div class="row-value">
+                                (504) 352 - 0118
+                            </div>
                         </div>
-                    </a>
 
-                    <a tabindex="2" href="#experience" id="nav-btn-experience">
-                        <div class="menu-btn">
-                            Work Experience
+                        <div class="row">
+                            <div class="row-key">
+                                LinkedIn
+                            </div>
+                            <div class="row-value">
+                                https://www.linkedin.com/in/buddycdelaune
+                            </div>
                         </div>
-                    </a>
 
-                    <div class="sub-menu">
-                        <a tabindex="3" href="#experience-leviton" id="nav-btn-experience-leviton">
-                            <div class="menu-btn">
-                                Leviton
+                        <div class="row">
+                            <div class="row-key">
+                                Web
                             </div>
-                        </a>
-                        <a tabindex="3" href="#experience-urs" id="nav-btn-experience-urs">
-                            <div class="menu-btn">
-                                AECOM/URS
+                            <div class="row-value">
+                                http://buddycdelaune.com
                             </div>
-                        </a>
-                        <a tabindex="3" href="#experience-ba" id="nav-btn-experience-ba">
-                            <div class="menu-btn">
-                                B&A Technologies
-                            </div>
-                        </a>
-                        <a tabindex="3" href="#experience-xennex" id="nav-btn-experience-xennex">
-                            <div class="menu-btn">
-                                XenneX LLC
-                            </div>
-                        </a>
-                        <a tabindex="3" href="#experience-ab" id="nav-btn-experience-ab">
-                            <div class="menu-btn">
-                                Amies Boutique
-                            </div>
-                        </a>
+                        </div>
                     </div>
-
-                    <a tabindex="3" href="#skills" id="nav-btn-skills">
-                        <div class="menu-btn">
-                            Skills
-                        </div>
-                    </a>
-
-                    <a tabindex="4" href="#languages" id="nav-btn-languages">
-                        <div class="menu-btn">
-                            Languages & Frameworks
-                        </div>
-                    </a>
-
-                    <a tabindex="5" href="#technology" id="nav-btn-technology">
-                        <div class="menu-btn">
-                            Tools & Technology
-                        </div>
-                    </a>
-
-                    <a tabindex="6" href="#references" id="nav-btn-references">
-                        <div class="menu-btn">
-                            References
-                        </div>
-                    </a>
-
                 </div>
 
-                <div class="resume-content col" data-spy="scroll" data-target="#resumemenu" data-offset="0">
+                <div data-scroll class="full-height resume-education" id="education">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
 
-                    <div data-scroll class="full-height resume-personal-info" id="info">
+                        <h3>Education</h3>
 
-                        <div class="resume-content-container">
-
-                            <!--                    <a href="#site-wrapper">-->
-                            <!--                        <button class="scroll-to-arrow scroll-to-top-arrow sticky-top">-->
-                            <!--                            <i class="fas fa-chevron-up"></i>-->
-                            <!--                        </button>-->
-                            <!--                    </a>-->
-
-                            <div class="user-icon">
-                                <svg class="bi bi-person-fill" width="50px" height="50px" viewBox="0 0 16 16"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
-                                          clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-
-                            <h3>Personal Information</h3>
-
-                            <div class="row">
-                                <div class="row-key col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center text-sm-left">
-                                    Address
-                                </div>
-                                <div class="row-value col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-center text-sm-left">
-                                    6108 Marigny St, New Orleans, Louisiana 70122
+                        <div class="row education-row">
+                            <div class="col-3">
+                                <div class="date">
+                                    2007
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="row-key col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center text-sm-left">
-                                    Cell Phone
+                            <div class="col-9">
+                                <div class="row">
+                                    Brother Martin High School
                                 </div>
-                                <div class="row-value col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-center text-sm-left">
-                                    (504) 352 - 0118
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="row-key col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center text-sm-left">
-                                    LinkedIn
-                                </div>
-                                <div class="row-value col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-center text-sm-left">
-                                    https://www.linkedin.com/in/buddycdelaune
+                                <div class="row">
+                                    4401 Elysian Fields Ave, New Orleans, LA 70122
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="row">
-                                <div class="row-key col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center text-sm-left">
-                                    Web
+                        <div class="row education-row">
+                            <div class="col-3">
+                                <div class="date">
+                                    2015
                                 </div>
-                                <div class="row-value col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-center text-sm-left">
-                                    http://buddycdelaune.com
+                            </div>
+                            <div class="col-9">
+                                <div class="row">
+                                    Louisiana State University
+                                </div>
+                                <div class="row">
+                                    Bachelors Degree in Computer Science with a concentration in Software Development
+                                </div>
+                                <div class="row">
+                                    Baton Rouge, LA 70803
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div data-scroll class="full-height resume-education" id="education">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-
-                            <h3>Education</h3>
-
-                            <div class="row education-row">
-                                <div class="col-3">
-                                    <div class="date">
-                                        2007
-                                    </div>
-                                </div>
-                                <div class="col-9">
-                                    <div class="row">
-                                        Brother Martin High School
-                                    </div>
-                                    <div class="row">
-                                        4401 Elysian Fields Ave, New Orleans, LA 70122
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row education-row">
-                                <div class="col-3">
-                                    <div class="date">
-                                        2015
-                                    </div>
-                                </div>
-                                <div class="col-9">
-                                    <div class="row">
-                                        Louisiana State University
-                                    </div>
-                                    <div class="row">
-                                        Bachelors Degree in Computer Science with a concentration in Software Development
-                                    </div>
-                                    <div class="row">
-                                        Baton Rouge, LA 70803
-                                    </div>
-                                </div>
-                            </div>
+                <div data-scroll class="full-height resume-experience" id="experience">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-building"></i>
                         </div>
-                    </div>
 
-                    <div data-scroll class="full-height resume-experience" id="experience">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-building"></i>
+                        <h3>Work Experience</h3>
+
+                        <div class="row" id="experience-leviton">
+                            <div class="col-3">
+                                May 2015 - present
                             </div>
-
-                            <h3>Work Experience</h3>
-
-                            <div class="row" id="experience-leviton">
-                                <div class="col-3">
-                                    May 2015 - present
+                            <div class="col-9">
+                                <div class="job-name">
+                                    Leviton Manufacturing Co Inc, New Orleans, La
                                 </div>
-                                <div class="col-9">
-                                    <div class="job-name">
-                                        Leviton Manufacturing Co Inc, New Orleans, La
+                                <div class="job-title">
+                                    <div>
+                                        <i>[2019 - present]</i> - Software Engineering Manager / Software Engineer
                                     </div>
-                                    <div class="job-title">
-                                        <div>
-                                            <i>[2019 - present]</i> - Software Engineering Manager / Software Engineer
-                                        </div>
-                                        <div>
-                                            <i>[2015 - 2019]</i> - Full Stack Software Engineer
-                                        </div>
-                                    </div>
-                                    <p class="job-description">
-                                        Work closely with product managers and UX designers to design, develop, and
-                                        implement
-                                        the smart
-                                        home technology needs of the market and our customers all around the world
-                                        using cutting edge technologies. Front-end work consists of creating dynamic mobile
-                                        and
-                                        web
-                                        applications that can communicate with devices through means of Bluetooth, Wi-Fi,
-                                        and
-                                        various RF protocols, but
-                                        also to Leviton Cloud Services via RESTful APIs. Back-end work consists of
-                                        creating new cloud service APIs, client libraries, and developing new integrations
-                                        with
-                                        other
-                                        Smart Home Technology partners including but not limited to Samsung, Google, Amazon,
-                                        and
-                                        Apple.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row" id="experience-urs">
-                                <div class="col-3">
-                                    July 2013 - May-2015
-                                </div>
-                                <div class="col-9">
-                                    <div class="job-name">
-                                        URS an AECOM Company, Baton Rouge, La
-                                    </div>
-                                    <div class="job-title">
-                                        Programmer
-                                    </div>
-                                    <p class="job-description">
-                                        Helped maintain and update a disaster recovery related online application storage
-                                        and
-                                        processing system. Acted as a helpdesk support administrator to serve the
-                                        programming
-                                        and data needs of coroworkers all around the country. Programming work consisted of:
-                                        using scripting languages to automate daily tasks and routines, updating two
-                                        front-end
-                                        web apps (written with ASP.net, c#, and the web dev technologies), maintaining two
-                                        native iOS (ipad only) applications (written in objective-c), and managing two
-                                        sizable
-                                        databases (one written in Oracle the other in SQLServer) in which my duties included
-                                        performing database development tasks like creating/modifying tables, views, and
-                                        procedures.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row" id="experience-ba">
-
-                                <div class="col-3">
-                                    December 2015 - present
-                                </div>
-                                <div class="col-9">
-
-                                    <div class="job-name">
-                                        B&A Technologies
-                                    </div>
-                                    <div class="job-title">
-                                        Co-founder/CTO/Lead Full Stack Developer
-                                    </div>
-                                    <p data-scroll class="job-description">
-                                        Mobile/Web application development. Front-end technologies include: Lua, Cordova,
-                                        html,
-                                        CSS, Sass, AngularJs. Back-end technologies include: GCP, Datastore, and python.
-                                        Notable
-                                        Project:
-                                        Zarba (iOS, Android) - discontinued 2018
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row" id="experience-xennex">
-
-                                <div class="col-3">
-                                    2014 - present
-                                </div>
-
-                                <div class="col-9">
-
-                                    <div class="job-name">
-                                        XenneX LLC (Sole Proprietorship), Baton Rouge, La
-                                    </div>
-                                    <div class="job-title">
-                                        Founder/Full Stack Developer
-                                    </div>
-                                    <p data-scroll class="job-description">
-                                        Sole Designer and Developer for mobile applications published for GooglePlay,
-                                        iTunes,
-                                        and the Amazon Store. Front end technologies used included: Lua, Html, CSS, Sass,
-                                        AngularJs, Cordova, Ionic. GCP, and python were used for cloud/server side
-                                        development,
-                                        and sqlLite and Datastore as the data storage solutions. Notable projects include:
-                                        Cosmic Crush (iOS, Android) Published 2014
-                                        A Layman's BAC Calculator (Android) Published 2014
-                                        Comet (iOS, Android, Amazon) Published 2015
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row" id="experience-ab">
-
-                                <div class="col-3">
-                                    2009 - 2013
-                                </div>
-
-                                <div class="col-9">
-
-                                    <div class="job-name">
-                                        Amies Boutique, Baton Rouge, La
-                                    </div>
-                                    <div class="job-title">
-                                        Graphic Designer/IT Admin
-                                    </div>
-                                    <p data-scroll class="job-description">
-                                        Planned and formulated IT policies/security standards, helped design data storage
-                                        solutions for inventory tracking, and worked one-on-one with owners to develop logo
-                                        designs, custom illustrations, ads, and website designs.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="full-height resume-skills" id="skills">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-balance-scale-left"></i>
-                            </div>
-
-                            <h3>Skills</h3>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Software Management</h4>
-                                        <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                    <div>
+                                        <i>[2015 - 2019]</i> - Full Stack Software Engineer
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Web Development</h4>
-                                        <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Mobile Development</h4>
-                                        <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Cloud</h4>
-                                        <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Building RESTful APIs</h4>
-                                        <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Scrum Master</h4>
-                                        <bcd-rating-circle fraction="true" rating="7" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Database Admin</h4>
-                                        <bcd-rating-circle fraction="true" rating="7" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>UX/Design</h4>
-                                        <bcd-rating-circle fraction="true" rating="6" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="rating-circle-block">
-                                        <h4>Dev Ops</h4>
-                                        <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="full-height resume-languages" id="languages">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-
-                            <h3>Languages & Frameworks</h3>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Javascript
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Typescript
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    NodeJs
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Ionic
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Angular
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Java
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="6" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    c#
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="7" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Bash
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="7" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    MySql
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="6" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Lua
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="7" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Python
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="8" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Objective-C
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="7" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Swift
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="8" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    Bootstrap
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="9" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                            <div data-scroll class="row">
-                                <div class="col-12 col-sm-4 col-lang text-center text-sm-left text-md-left text-lg-left text-xl-left">
-                                    ReactJs
-                                </div>
-                                <div class="col-12 col-sm-8 col-lang-rating text-center text-sm-right text-md-right text-lg-right text-xl-right">
-                                    <bcd-rating rating="6" max="10"></bcd-rating>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="full-height resume-technology" id="technology">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-
-                            <h3>Tools & Technologies</h3>
-
-                            <div class="row text-center">
-                                <p data-scroll>
-                                    GCP, AWS,
-                                    Git, svn,
-                                    Intermediate Networking,
-                                    Web Components, Apache, nginx, Wordpress
-                                    Vim, Illustrator, Photoshop,
-                                    Various database solutions (including MySql, MongoDb, NoSql, Datastore),
-                                    Various Package Managers (including npm, bower, homebrew, apt),
-                                    Various Desktop & Mobile Operating Systems (including Linux, Windows, MacOs, Android,
-                                    iOS),
+                                <p class="job-description">
+                                    Work closely with product managers and UX designers to design, develop, and
+                                    implement
+                                    the smart
+                                    home technology needs of the market and our customers all around the world
+                                    using cutting edge technologies. Front-end work consists of creating dynamic mobile
+                                    and
+                                    web
+                                    applications that can communicate with devices through means of Bluetooth, Wi-Fi,
+                                    and
+                                    various RF protocols, but
+                                    also to Leviton Cloud Services via RESTful APIs. Back-end work consists of
+                                    creating new cloud service APIs, client libraries, and developing new integrations
+                                    with
+                                    other
+                                    Smart Home Technology partners including but not limited to Samsung, Google, Amazon,
+                                    and
+                                    Apple.
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="full-height resume-references" id="references">
-                        <div class="resume-content-container">
-                            <div class="user-icon">
-                                <i class="fas fa-envelope"></i>
+                        <div data-scroll class="row" id="experience-urs">
+                            <div class="col-3">
+                                July 2013 - May-2015
+                            </div>
+                            <div class="col-9">
+                                <div class="job-name">
+                                    URS an AECOM Company, Baton Rouge, La
+                                </div>
+                                <div class="job-title">
+                                    Programmer
+                                </div>
+                                <p class="job-description">
+                                    Helped maintain and update a disaster recovery related online application storage
+                                    and
+                                    processing system. Acted as a helpdesk support administrator to serve the
+                                    programming
+                                    and data needs of coroworkers all around the country. Programming work consisted of:
+                                    using scripting languages to automate daily tasks and routines, updating two
+                                    front-end
+                                    web apps (written with ASP.net, c#, and the web dev technologies), maintaining two
+                                    native iOS (ipad only) applications (written in objective-c), and managing two
+                                    sizable
+                                    databases (one written in Oracle the other in SQLServer) in which my duties included
+                                    performing database development tasks like creating/modifying tables, views, and
+                                    procedures.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row" id="experience-ba">
+
+                            <div class="col-3">
+                                December 2015 - present
+                            </div>
+                            <div class="col-9">
+
+                                <div class="job-name">
+                                    B&A Technologies
+                                </div>
+                                <div class="job-title">
+                                    Co-founder/CTO/Lead Full Stack Developer
+                                </div>
+                                <p data-scroll class="job-description">
+                                    Mobile/Web application development. Front-end technologies include: Lua, Cordova,
+                                    html,
+                                    CSS, Sass, AngularJs. Back-end technologies include: GCP, Datastore, and python.
+                                    Notable
+                                    Project:
+                                    Zarba (iOS, Android) - discontinued 2018
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row" id="experience-xennex">
+
+                            <div class="col-3">
+                                2014 - present
                             </div>
 
-                            <h3>References</h3>
+                            <div class="col-9">
 
-                            <h4 data-scroll>
-                                References available upon request.
-                            </h4>
+                                <div class="job-name">
+                                    XenneX LLC (Sole Proprietorship), Baton Rouge, La
+                                </div>
+                                <div class="job-title">
+                                    Founder/Full Stack Developer
+                                </div>
+                                <p data-scroll class="job-description">
+                                    Sole Designer and Developer for mobile applications published for GooglePlay,
+                                    iTunes,
+                                    and the Amazon Store. Front end technologies used included: Lua, Html, CSS, Sass,
+                                    AngularJs, Cordova, Ionic. GCP, and python were used for cloud/server side
+                                    development,
+                                    and sqlLite and Datastore as the data storage solutions. Notable projects include:
+                                    Cosmic Crush (iOS, Android) Published 2014
+                                    A Layman's BAC Calculator (Android) Published 2014
+                                    Comet (iOS, Android, Amazon) Published 2015
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row" id="experience-ab">
+
+                            <div class="col-3">
+                                2009 - 2013
+                            </div>
+
+                            <div class="col-9">
+
+                                <div class="job-name">
+                                    Amies Boutique, Baton Rouge, La
+                                </div>
+                                <div class="job-title">
+                                    Graphic Designer/IT Admin
+                                </div>
+                                <p data-scroll class="job-description">
+                                    Planned and formulated IT policies/security standards, helped design data storage
+                                    solutions for inventory tracking, and worked one-on-one with owners to develop logo
+                                    designs, custom illustrations, ads, and website designs.
+                                </p>
+
+                            </div>
                         </div>
                     </div>
-
                 </div>
+
+                <div class="full-height resume-skills" id="skills">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-balance-scale-left"></i>
+                        </div>
+
+                        <h3>Skills</h3>
+
+                        <div data-scroll class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Software Management</h4>
+                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Web Development</h4>
+                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Mobile Development</h4>
+                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Cloud</h4>
+                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Building RESTful APIs</h4>
+                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Scrum Master</h4>
+                                    <bcd-rating-circle fraction="true" rating="7" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Database Admin</h4>
+                                    <bcd-rating-circle fraction="true" rating="7" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>UX/Design</h4>
+                                    <bcd-rating-circle fraction="true" rating="6" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="rating-circle-block">
+                                    <h4>Dev Ops</h4>
+                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full-height resume-languages" id="languages">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h3>Languages & Frameworks</h3>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Javascript
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Typescript
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                NodeJs
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Ionic
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Angular
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Java
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="6" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                c#
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="7" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Bash
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="7" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                MySql
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="6" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Lua
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="7" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Python
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="8" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Objective-C
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="7" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Swift
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="8" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                Bootstrap
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="9" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                        <div data-scroll class="row">
+                            <div class="col-4 col-sm-4 col-lang">
+                                ReactJs
+                            </div>
+                            <div class="col-8 col-sm-8 col-lang-rating">
+                                <bcd-rating rating="6" max="10"></bcd-rating>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="full-height resume-technology" id="technology">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+
+                        <h3>Tools & Technologies</h3>
+
+                        <div class="row text-center">
+                            <p data-scroll>
+                                GCP, AWS,
+                                Git, svn,
+                                Intermediate Networking,
+                                Web Components, Apache, nginx, Wordpress
+                                Vim, Illustrator, Photoshop,
+                                Various database solutions (including MySql, MongoDb, NoSql, Datastore),
+                                Various Package Managers (including npm, bower, homebrew, apt),
+                                Various Desktop & Mobile Operating Systems (including Linux, Windows, MacOs, Android,
+                                iOS),
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full-height resume-references" id="references">
+                    <div class="resume-content-container">
+                        <div class="user-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <h3>References</h3>
+
+                        <h4 data-scroll>
+                            References available upon request.
+                        </h4>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>

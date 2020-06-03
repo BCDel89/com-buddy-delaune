@@ -22,622 +22,266 @@
 $gray: rgb(20, 20, 20);
 $gray-gradient: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(59, 57, 57, 1) 100%);
 $lightgray: rgb(240, 240, 240);
+$pdfGray: rgb(120,120,120);
 
 html {
-  background: rgb(5, 5, 5);
-  scroll-behavior: smooth;
-  margin-top: -8px;
+  background: white;
 }
 
+body {
+  position: relative;
+  font-family: 'Roboto, Thin';
+  height: 15.5in;
+  width: 10.8in;
+  margin: 0 auto;
+  //border: 1px solid gray;
+}
 
-.pdf {
-  background-color: pink;
+.affix {
+  top: 20px;
+  z-index: 9999 !important;
+}
 
-  .cover-container {
-    display: none !important;
-  }
+.full-height {
+  height: auto;
+}
 
-  .affix {
-    top: 20px;
-    z-index: 9999 !important;
-  }
+.nav {
+  display: none;
+}
 
-  .full-height {
+$menuSize: 300px;
+
+.site-wrapper {
+  margin: 3px;
+  height: 100%;
+
+  .site-wrapper-inner {
     height: 100%;
-  }
 
-  .site-wrapper {
-
-    .site-wrapper-inner {
-
-      .cover-container {
-        position: relative;
-        height: 100vh;
-        margin: 0 auto;
-        text-align: center;
-        font-weight: 300;
-
-        .glass-panel-bkg, .glass-panel {
-          max-width: 600px;
-          max-height: 600px;
-          //min-width: 350px;
-          //min-height: 350px;
-          $size: 60vw;
-          width: $size;
-          height: $size;
-          z-index: 99;
-        }
-
-        .glass-panel-bkg {
-          @extend .glass;
-          box-shadow: 2px 2px 2px rgba(black, 0.7);
-          position: absolute;
-          margin: 0 auto;
-          top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        }
-
-        .glass-panel {
-          position: relative;
-          margin: 0 auto;
-          top: 50%;
-          transform: translateY(-50%);
-          color: $gray-gradient;
-          //color: white;
-
-          &-content {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-          }
-
-          h1 {
-            display: inline-block;
-            margin-bottom: 20px;
-            font-size: 1.9em;
-          }
-
-          .scroll-to-arrow {
-            //box-shadow: 2px 2px 2px rgba(black, 0.35);
-            border: 2px solid white;
-            background-image: $gray-gradient;
-            position: absolute;
-            padding: 5px;
-            width: 40px;
-            height: 40px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-
-            i {
-              color: white;
-              height: 100%;
-              line-height: 100%;
-              padding-top: 6px;
-              vertical-align: middle;
-              transform: rotate(-45deg);
-            }
-          }
-
-          .scroll-to-arrow:hover {
-            border: 3px solid $lightgray;
-          }
-
-          .scroll-to-arrow:focus, .scroll-to-arrow:active {
-            outline: none;
-          }
-        }
-
-      }
-
-    }
-  }
-
-  .sticky {
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-  }
-
-  .resume {
-    $menuSize: 280px;
-
-    .row {
-      margin-left: 0;
-      margin-right: 0;
+    .cover-container {
+      display: none;
     }
 
-    .resume-menu {
-      //float: left;
-      min-width: $menuSize;
-      max-width: $menuSize;
-      width: $menuSize;
-      height: 100vh;
-      background-image: $gray-gradient;
-      text-align: center;
-      color: white;
-
-      .profile {
-        position: relative;
-        text-align: center;
-
-        img {
-          width: calc(#{$menuSize} * .6);
-          padding: 20px;
-        }
-      }
-
-      h4 {
-        margin-bottom: 7vh;
-        font-size: 19px;
-        text-transform: uppercase;
-        color: white;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-
-        .menu-btn {
-          width: 100%;
-          height: 50px;
-          line-height: 50px;
-          background: transparent;
-          border: none;
-          color: white;
-          text-align: left;
-          padding-left: 13px;
-          margin-left: 40px;
-          font-size: 14.5px;
-          //margin-top: 1.5vh;
-          transition-duration: .25s;
-          transition-property: all;
-        }
-      }
-
-      .sub-menu {
-        height: 0;
-        overflow: hidden;
-        transition: 2s;
-        transition-property: all;
-
-        .menu-btn {
-          height: 35px;
-          line-height: 35px;
-          font-size: 13.5px;
-          margin-left: 55px;
-        }
-
-        .menu-btn:before {
-          content: '\2022';
-        }
-      }
-
-      .sub-menu.sub-menu-full {
-        height: auto;
-      }
-
-      a:focus, a:active, .menu-btn-focused {
-        outline: none;
-
-        .menu-btn {
-          border: none;
-          color: black;
-          background: white;
-        }
-      }
-
-      a:hover {
-        text-decoration: none;
-
-        .menu-btn {
-          outline: none;
-          background: white;
-          color: black;
-        }
-      }
-    }
-
-    .resume-content {
-      width: inherit;
+    .resume {
       position: relative;
-      height: auto;
-      overflow-y: scroll;
-      padding: 0;
+      height: 100%;
 
-      .user-icon:hover {
-        @extend .tran-fun;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
       }
 
-      h3:hover {
-        @extend .tran-grow
+      .user-icon {
+        display: none;
       }
 
-      &-container {
-        width: 80%;
-        margin: 0 auto;
-        max-width: 950px;
-      }
+      .resume-menu {
+        margin-left: 11px;
+        margin-top: -3px;
+        height: 100%;
+        border-right: 1px solid black;
+        color: black;
+        text-align: center;
+        width: $menuSize;
+        min-width: $menuSize;
+        max-width: $menuSize;
 
-      .resume-personal-info,
-      .resume-experience,
-      .resume-languages,
-      .resume-references,
-      .resume-education,
-      .resume-skills,
-      .resume-technology {
-        $hPad: 3vh;
-        height: auto;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-        padding-left: 10%;
-        padding-right: 10%;
+        a {
+          visibility: hidden;
+          text-underline: none;
+          text-decoration: none;
+        }
 
-        .user-icon {
-          $userIconSize: 75px;
-          border-radius: 50%;
-          background-image: $gray-gradient;
-          height: $userIconSize;
-          width: $userIconSize;
-          line-height: $userIconSize;
-          margin: 0 auto $hPad auto;
-          text-align: center;
-
-          svg, i {
-            fill: white;
-            color: white;
-          }
-
-          i {
-            font-size: 35px;
-            line-height: 35px;
-            vertical-align: middle;
+        .profile {
+          visibility: visible;
+          img {
+            $isize: 80px;
+            position: absolute;
+            top: 95px;
+            width: $isize;
+            height: $isize;
+            left: 50%;
+            transform: translateX(-60%);
           }
         }
 
-        h3 {
-          text-align: center;
-          margin-bottom: calc(#{$hPad} * 2);
-        }
-      }
-
-      .resume-personal-info,
-      .resume-education {
-        padding-left: 10vw;
-        padding-right: 10vw;
-      }
-
-      .resume-personal-info, .resume-experience, .resume-languages, .resume-references {
-        background-color: white;
-      }
-
-      .resume-education, .resume-skills, .resume-technology {
-        background: $lightgray;
-      }
-
-      .resume-experience {
-        .row {
-          margin-bottom: 40px;
-          padding-top: 40px;
+        .sub-menu {
+          display: none;
         }
 
-        .col-3 {
-          font-style: italic;
-        }
-
-        .col-9 {
-          .job-name {
-            font-family: Roboto, Bold;
-          }
-
-          .job-description {
-            font-size: 13.5px;
-          }
-        }
-      }
-
-      .resume-skills {
         h4 {
-          font-size: 19px;
+          visibility: visible;
+          color: black;
+          font-size: 28px;
+          margin-top: 30px;
         }
+      }
 
-        .col {
-          padding: 20px;
-        }
+      .col {
+        position: static !important;
+      }
 
-        .rating-circle-block {
-          text-align: center;
+      .resume-content {
+        padding: 0;
+        margin-right: 11px;
+
+        &-container {
+          padding: 30px;
+
+          h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+          }
 
           bcd-rating-circle {
-            margin-left: 50%;
-            transform: translateX(-41%);
-          }
-        }
-      }
-
-      .resume-personal-info {
-        .row {
-          padding-top: 10px;
-          width: 380px;
-          margin: 0 auto;
-        }
-
-        .row-key {
-          font-family: 'Roboto, Bold';
-        }
-
-        .row-value {
-          font-weight: 300;
-        }
-      }
-
-      //.resume-skills,
-      .resume-languages {
-        .row {
-          vertical-align: middle;
-          min-width: 300px;
-          max-width: 850px;
-          margin: 0 auto;
-          transition: all .25s;
-
-          .col-lang {
-            text-align: left;
-          }
-
-          .col-lang-rating {
-            text-align: right;
-          }
-
-          div {
-            text-align: center;
-            padding: 10px;
-
-            bcd-rating {
-              padding: 5px;
-              --bcd-rating-border-color: black;
-              --bcd-rating-empty-color: white;
-              --bcd-rating-fill-color: black;
-              --bcd-rating-hover-border-color: black;
-              //--bcd-rating-border-width: 0;
-              --bcd-rating-border-width: 2px;
-            }
-
+            display: none;
           }
         }
 
-        .row:hover {
-          background-color: white;
-          font-weight: 900;
-          font-size: 17px;
-          --bcd-rating-size: 40px;
-          transform: scale(1.1);
-        }
-      }
+        .resume-personal-info {
+          .row {
+            font-size: 15px;
+          }
 
-      .resume-languages {
-        .row:hover {
+          .row-key {
+            font-family: Roboto, Bold;
+            width: 165px;
+          }
+        }
+
+        .resume-education {
           background-color: $lightgray;
-        }
-      }
 
-      .resume-technology {
-        .row {
-          width: 80%;
-          min-width: 300px;
-          margin: 0 auto;
-        }
-      }
-
-      .resume-references {
-        h4 {
-          text-align: center;
-          font-style: italic;
-          font-size: 18px;
-        }
-      }
-
-      .resume-education {
-        .education-row {
-          border-bottom: 0.55px solid rgba($gray, 0.7);
-          margin-bottom: 30px;
-          padding: 15px;
-
-          .col-3 {
-            border-right: 0.55px solid rgba($gray, 0.7);
-            text-align: right;
+          .education-row {
+            padding-top: 10px;
+            padding-bottom: 10px;
           }
 
           .col-9 {
-            .row {
-              padding-left: 25px;
-              font-weight: 300;
-              font-size: 15px;
-            }
-
             .row:first-child {
-              font-weight: 900;
-              font-size: 17px;
+              font-size: 16px;
+              font-family: Roboto, Bold;
             }
-
             .row:last-child {
               font-style: italic;
             }
           }
         }
-      }
-    }
-  }
 
-  .text-right {
-    text-align: right;
-  }
+        .resume-experience {
+          .row {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
 
-  .ds-base {
-    transition: opacity 1.5s, bottom 1.5s;
-    position: relative;
-    opacity: 0;
-    bottom: -50px;
-  }
+          .job-name {
+            font-size: 16px;
+            font-family: Roboto, Bold;
+          }
 
-  .ds-base-in {
-    bottom: 0;
-    opacity: 1;
-  }
+          .job-title {
+            font-size: 14px;
+            font-family: Roboto, Regular;
+          }
 
-  .ds-base-out {
-    bottom: 0;
-    opacity: 0;
-  }
-
-  p[data-scroll], h3[data-scroll] {
-    @extend .ds-base;
-  }
-
-  p[data-scroll="in"], h3[data-scroll="in"] {
-    @extend .ds-base-in;
-  }
-
-  p[data-scroll="out"], h3[data-scroll="out"] {
-    @extend .ds-base-out;
-  }
-
-  .resume-content {
-    [data-scroll] {
-      .row {
-        div, p {
-          @extend .ds-base;
+          .job-description {
+            font-size: 12.5px;
+          }
         }
-      }
-    }
 
-    [data-scroll="in"] {
-      .row {
-        div, p {
-          @extend .ds-base-in;
+        .resume-skills, .resume-languages, .resume-technology, .resume-references {
+          padding: 15px 0 15px 0;
+
+          .row {
+            font-size: 15px;
+          }
         }
-      }
-    }
 
-    [data-scroll="out"] {
-      .row {
-        div, p {
-          @extend .ds-base-out;
+        .resume-skills {
+          position: absolute;
+          top: 160px;
+          left: 0;
+          width: $menuSize;
+          text-align: center;
+
+          .row {
+            div {
+              width: 100%;
+              min-width: 100%;
+            }
+            h4 {
+              font-size: 15.0px;
+              color: $pdfGray;
+            }
+          }
         }
+
+        .resume-languages {
+          position: absolute;
+          top: 475px;
+          left: 0;
+          width: $menuSize;
+          text-align: center;
+
+          .row {
+            margin-left: 7px;
+            text-align: center;
+            padding: 3px;
+
+            .col-lang {
+              color: $pdfGray;
+              padding-right: 0;
+              text-align: left;
+              font-size: 15px;
+              width: 90px;
+              min-width: 90px;
+            }
+
+            .col-lang-rating {
+              width: 100px;
+              max-width: 100px;
+
+              bcd-rating {
+                --bcd-rating-size: 7px;
+                --bcd-rating-border-width: 1;
+                --bcd-rating-empty-color: #c0c0c0;
+                --bcd-rating-border-color: #c0c0c0;
+              }
+            }
+          }
+        }
+
+        .resume-technology {
+          position: absolute;
+          top: 970px;
+          left: 0;
+          width: $menuSize;
+          color: black;
+          text-align: center;
+
+          .row {
+            text-align: center;
+            color: $pdfGray;
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+
+        .resume-references {
+          position: absolute;
+          top: 1330px;
+          left: 0;
+          text-align: center;
+
+          h4 {
+            font-size: 16px;
+            font-style: italic;
+          }
+        }
+
       }
-    }
-  }
-
-  .anim-slide-up {
-    position: relative;
-    bottom: -50px;
-    opacity: 0;
-    animation-name: kf-slide-up;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-  }
-
-
-  .anim-typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid transparent; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: kf-typing 3.5s steps(40, end), kf-blink-caret .75s step-end infinite;
-  }
-
-  .anim-pulse {
-    transform: scale(1);
-    animation: kf-pulse 2s infinite;
-  }
-
-  .anim-pulse-sa {
-    transform: scale(1);
-    animation: kf-pulse-sa 2s infinite;
-  }
-
-  .anim-fun {
-    animation-name: kf-fun;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-  }
-
-  .tran-grow {
-    transition: .5s;
-  }
-
-  .tran-grow:hover {
-    transform: scale(1.025);
-    text-shadow: 1px 1px 1px rgba(black, 0.2);
-  }
-
-  .tran-fun {
-    transition: .5s;
-  }
-
-  .tran-fun:hover {
-    transform: rotate(360deg) scale(1.15);
-    box-shadow: 1px 1px 3px rgba(black, 0.8);
-  }
-
-  @keyframes kf-slide-up {
-    100% {
-      bottom: 0;
-      opacity: 1;
-    }
-  }
-
-  /* The typing effect */
-  @keyframes kf-typing {
-    from {
-      width: 0
-    }
-    to {
-      width: 100%
-    }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes kf-blink-caret {
-    from, to {
-      border-color: transparent
-    }
-    50% {
-      border-color: #28fe13;
-    }
-  }
-
-  @keyframes kf-pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.15);
-    }
-  }
-
-  @keyframes kf-pulse-sa {
-    0% {
-      transform: translateX(-50%) scale(1) rotate(45deg);
-      //box-shadow: 2px 2px 2px rgba(black, 0.35);
-    }
-    50% {
-      transform: translateX(-50%) scale(1.15) rotate(45deg);
-      //box-shadow: 2px 2px 2px rgba(black, 0.35);
-    }
-  }
-
-  @keyframes kf-fun {
-    0% {
-
-    }
-    90% {
-      transform: rotate(360deg) scale(1.15);
-      box-shadow: 1px 1px 2px #888888;
     }
   }
 }
