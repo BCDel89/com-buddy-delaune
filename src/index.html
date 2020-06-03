@@ -28,12 +28,15 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 <script src="https://kit.fontawesome.com/ab868b7962.js" crossorigin="anonymous"></script>
 <script type="module"
         src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script src="/bundle.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 
 <div id="site-wrapper" class="site-wrapper full-height">
 
@@ -61,19 +64,6 @@
             <a href="#">
                 <div>
                     Contact
-                </div>
-            </a>
-        </nav>
-
-        <nav class="nav nav-right nav-right-print">
-            <a href="">
-                <div onclick="print()">
-                    <i class="fas fa-print"></i>
-                </div>
-            </a>
-            <a href="">
-                <div id="printBtn" onclick="onPrint()">
-                    <i class="fas fa-share"></i>
                 </div>
             </a>
         </nav>
@@ -196,9 +186,23 @@
 
             </div>
 
-            <div class="resume-content col" data-spy="scroll" data-target="#resumemenu" data-offset="0">
+            <div id="resumecontent" class="resume-content col" data-spy="scroll" data-target="#resumemenu" data-offset="0">
 
                 <div data-scroll class="full-height resume-personal-info" id="info">
+
+                    <nav class="nav nav-right nav-right-print" id="nav-right-print">
+<!--                        <a href="">-->
+<!--                            <div onclick="print()">-->
+<!--                                <i class="fas fa-print"></i>-->
+<!--                            </div>-->
+<!--                        </a>-->
+                        <a href="">
+                            <div id="saveBtn" onclick="print()">
+                                <i class="fas fa-save"></i>
+                            </div>
+                        </a>
+                    </nav>
+
 
                     <div class="resume-content-container">
 

@@ -8,13 +8,13 @@ const clearMenuFocus = () => {
 const handleObserverEvent = (entries, observer) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
-			console.log('entry', entry);
+			// console.log('entry', entry);
 
 			const id = entry.target.id;
 			const element = $('#nav-btn-' + id);
 
 			if (element) {
-				console.log('element: ', element);
+				// console.log('element: ', element);
 				clearMenuFocus();
 				element.addClass('menu-btn-focused');
 				// element.focus();
@@ -31,14 +31,28 @@ const handleObserverEvent = (entries, observer) => {
 	})
 };
 
-const createObserver = () => {
+const onScroll = () => {
+	const screenHeight = window.innerHeight;
+	const yAxis = window.scrollY;
+
+	if (yAxis > (screenHeight - 50)) {
+		const navRightPrint = document.getElementById('nav-right-print');
+		const hasClass = navRightPrint.classList.contains('sticky');
+		if (!hasClass) navRightPrint.classList.add('sticky');
+	} else {
+		const navRightPrint = document.getElementById('nav-right-print');
+		const hasClass = navRightPrint.classList.contains('sticky');
+		if (hasClass) navRightPrint.classList.remove('sticky');
+	}
+};
+
+const createObservers = () => {
 	let options = {
 		root: null,
 		rootMargin: '0px',
 		threshold: 0.80
 		// threshold: 0.385
 	};
-
 
 	let observer = new IntersectionObserver((entries, observer) => handleObserverEvent(entries), options);
 
@@ -55,6 +69,7 @@ const createObserver = () => {
 	observer.observe(document.querySelector('#technology'));
 	observer.observe(document.querySelector('#references'));
 
+	window.onscroll = onScroll;
 };
 
 // Set things up
@@ -64,37 +79,11 @@ window.addEventListener("load", (event) => {
 
 
 const initialize = () => {
-	createObserver();
+	createObservers();
 	ScrollOut({
 		offset: 0
 	});
-
-	ScrollOut({
-		targets: ".nav-right-print",
-		offset: window.innerHeight
-	});
-
-	document.getElementById('printBtn').addEventListener('click', onPrint);
 };
 
-function onPrint() {
-	// doc.save('buddycdelaune_resume.pdf');
-
-	const doc = new jsPDF('p', 'in', 'letter');
-	const source = $('html')[0].innerHTML;
-
-	console.log('on print', source);
-
-	doc.fromHTML(
-	source, // HTML string or DOM elem ref.
-	0.5,    // x coord
-	0.5,    // y coord
-	{
-		'width': 7.5, // max width of content on PDF
-	});
-
-	// doc.output('dataurl');
-	doc.save();
-}
 
 
