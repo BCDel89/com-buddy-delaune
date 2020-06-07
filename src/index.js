@@ -83,6 +83,10 @@ const initialize = () => {
 	ScrollOut({
 		offset: 0
 	});
+
+	$('#covercontainer').addClass('loaded');
+	$('#glasspanelcontent').addClass('loaded');
+	$('.nav').addClass('loaded');
 };
 
 
