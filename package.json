@@ -24,7 +24,7 @@
   "dependencies": {
     "bcd-web-components": "^1.0.3",
     "bootstrap": "^3.4.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.152",
