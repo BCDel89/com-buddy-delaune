@@ -281,6 +281,14 @@ $menuSize: 300px;
           }
         }
 
+        .show-pdf {
+          display: initial;
+        }
+
+        .hide-pdf {
+          display: none;
+        }
+
       }
     }
   }
