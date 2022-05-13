@@ -262,6 +262,10 @@ body {
           margin-bottom: 20px;
           font-size: 1.52em;
           text-shadow: 1px 1px 3px darkgrey;
+
+          @media (max-width: $thresholdMobile) {
+            font-size: 1.12em;
+          }
         }
 
         p {
@@ -528,6 +532,10 @@ body {
         display: inline;
         text-align: left;
         padding: 0;
+
+        @media (max-width: $thresholdMobile) {
+          font-size: 0.9em;
+        }
       }
 
       @media (max-width: $thresholdMobile) {
