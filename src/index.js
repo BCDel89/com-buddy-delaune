@@ -1,5 +1,6 @@
 import './main.scss';
 import './pdf.scss';
+import './mobile.scss';
 
 const clearMenuFocus = () => {
 	$('.menu-btn-focused').removeClass('menu-btn-focused');

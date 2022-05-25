@@ -46,7 +46,7 @@ module.exports = {
 			},
 			{
 				test: /\.s(a|c)ss$/,
-				exclude: /pdf.scss/,
+				exclude: /(pdf|mobile).scss/,
 				use: [
 					'style-loader',
 					{
@@ -76,6 +76,29 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: 'print.min.css'
+						}
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							implementation: require('node-sass'),
+							sourceMap: true,
+							sassOptions: {
+								outputStyle: 'compressed',
+							},
+						}
+					},
+					'resolve-url-loader'
+				]
+			},
+			{
+				test: /mobile.scss/,
+				use: [
+					'style-loader',
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'mobile.min.css'
 						}
 					},
 					{
