@@ -23,7 +23,6 @@ $gray: rgb(20, 20, 20);
 $gray-gradient: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(59, 57, 57, 1) 100%);
 $lightgray: rgb(240, 240, 240);
 $pdfGray: rgb(120,120,120);
-$lineAndBkg: #d8d6d7;
 
 html {
   background: white;
@@ -51,37 +50,19 @@ body {
   display: none;
 }
 
-$menuSize: 0;
+$menuSize: 300px;
 
 .mobile-experience {
-  display: grid;
+  display: none;
 }
 
 .desktop-experience {
-  display: none;
+  display: grid;
 }
 
 .site-wrapper {
   margin: 3px;
   height: 100%;
-  font-size: 13.5px;
-
-  a {
-    //visibility: hidden;
-    color: black;
-    text-underline: none;
-    text-decoration: none;
-  }
-
-  .menu-btn {
-    display: none;
-  }
-
-  .resume-menu-name {
-    //text-align: center;
-    //font-size: 35px;
-    margin-bottom: 20px;
-  }
 
   .site-wrapper-inner {
     height: 100%;
@@ -99,34 +80,33 @@ $menuSize: 0;
       position: relative;
       height: 100%;
 
-
-      .personal-information {
-        display: none;
-      }
-
       .user-icon {
         display: none;
       }
 
       .resume-menu {
-        display: none;
         margin-left: 11px;
         margin-top: -3px;
         height: 100%;
-        //border-right: 1px solid $gray;
+        border-right: 1px solid $gray;
         color: $gray;
         text-align: center;
         width: $menuSize;
         min-width: $menuSize;
         max-width: $menuSize;
 
+        a {
+          visibility: hidden;
+          text-underline: none;
+          text-decoration: none;
+        }
+
         .profile {
-          display: none;
           visibility: visible;
           img {
             $isize: 80px;
-            //position: absolute;
-            //top: 95px;
+            position: absolute;
+            top: 95px;
             width: $isize;
             height: $isize;
             left: 50%;
@@ -139,8 +119,7 @@ $menuSize: 0;
         }
 
         h4 {
-          //visibility: visible;
-          display: none;
+          visibility: visible;
           color: $gray;
           font-size: 28px;
           margin-top: 30px;
@@ -170,15 +149,8 @@ $menuSize: 0;
         }
 
         .resume-personal-info {
-          width: 50%;
-          height: 258px;
-          float: left;
-          border-right: 1px solid white;
-          background: $lineAndBkg;
-
           .row {
-            font-size: 14px;
-            margin: 8px 0 8px 0;
+            font-size: 15px;
           }
 
           .row-key {
@@ -188,10 +160,7 @@ $menuSize: 0;
         }
 
         .resume-education {
-          background-color: $lineAndBkg;
-          padding-left: 15px;
-          width: 50%;
-          float: right;
+          background-color: $lightgray;
 
           .education-row {
             padding-top: 10px;
@@ -210,10 +179,6 @@ $menuSize: 0;
         }
 
         .resume-experience {
-          clear: both;
-          background: white;
-          margin-bottom: 50px;
-
           .row {
             padding-top: 8px;
             padding-bottom: 8px;
@@ -222,31 +187,15 @@ $menuSize: 0;
           .job-name {
             font-size: 16px;
             font-family: Roboto, Bold;
-            margin-top: 25px;
-          }
-
-          .job-time {
-            border-bottom: 2px solid $lineAndBkg;
           }
 
           .job-title {
             font-size: 14px;
             font-family: Roboto, Regular;
-            margin-top: 15px;
-
-            .job-time {
-              border: none;
-            }
           }
 
           .job-description {
-            font-size: 10.0px;
-          }
-
-          ul {
-            li {
-              //font-size: 13px;
-            }
+            font-size: 11.5px;
           }
         }
 
@@ -259,48 +208,49 @@ $menuSize: 0;
         }
 
         .resume-skills {
-          background-color: $lineAndBkg;
-          clear: both;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: $menuSize;
+          text-align: center;
 
           .row {
-            text-align: center;
-
-            .col-12 {
-              max-width: 305px !important;
+            div {
+              width: 100%;
+              min-width: 100%;
             }
             h4 {
               font-size: 15.0px;
               margin: 2px;
-              //color: $pdfGray;
+              color: $pdfGray;
             }
           }
         }
 
         .resume-languages {
-          //width: $menuSize;
-          //text-align: center;
-          width: 50%;
-          float: left;
-          border-right: 1px solid $lineAndBkg;
+          position: absolute;
+          top: 430px;
+          left: 0;
+          width: $menuSize;
           text-align: center;
 
           .row {
-            margin-left: 12%;
-            //text-align: center;
-            //padding: 3px;
+            margin-left: 7px;
+            text-align: center;
+            padding: 3px;
 
             .col-lang {
-              //color: $pdfGray;
+              color: $pdfGray;
               padding-right: 0;
               text-align: left;
               font-size: 15px;
-              //width: 90px;
-              //min-width: 90px;
+              width: 90px;
+              min-width: 90px;
             }
 
             .col-lang-rating {
-              //width: 100px;
-              //max-width: 100px;
+              width: 100px;
+              max-width: 100px;
 
               bcd-rating {
                 --bcd-rating-size: 7px;
@@ -313,24 +263,25 @@ $menuSize: 0;
         }
 
         .resume-technology {
-          width: 50%;
-          float: right;
+          position: absolute;
+          top: 970px;
+          left: 0;
+          width: $menuSize;
           color: $gray;
           text-align: center;
-          padding: 2% 8% 0 8%;
 
           .row {
-            //text-align: center;
-            //color: $pdfGray;
+            text-align: center;
+            color: $pdfGray;
             font-size: 15px;
             line-height: 25px;
           }
         }
 
         .resume-references {
-          //position: absolute;
-          //top: 1330px;
-          //left: 0;
+          position: absolute;
+          top: 1330px;
+          left: 0;
           text-align: center;
 
           h4 {

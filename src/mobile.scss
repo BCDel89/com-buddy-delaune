@@ -29,17 +29,15 @@ html {
 }
 
 body {
-  position: relative;
-  font-family: 'Roboto, Thin';
-  height: 15.5in;
-  width: 10.8in;
-  margin: 0 auto;
-  //border: 1px solid gray;
 }
 
 .affix {
   top: 20px;
   z-index: 9999 !important;
+}
+
+.cover-container {
+  display: none;
 }
 
 .full-height {
@@ -52,268 +50,61 @@ body {
 
 $menuSize: 300px;
 
+
+.desktop-experience {
+  display: none;
+}
+
+.mobile-experience {
+  display: grid !important;
+}
+
 .site-wrapper {
-  margin: 3px;
-  height: 100%;
 
   .site-wrapper-inner {
-    height: 100%;
+    .resume-content {
 
-    .row {
-      margin-left: 0;
-      margin-right: 0;
-    }
+      .resume-content-container {
+        width: 90%;
 
-    .cover-container {
-      display: none;
-    }
-
-    .resume {
-      position: relative;
-      height: 100%;
-
-      .resume-menu-name {
-        margin-bottom: 15px;
-      }
-
-      .user-icon {
-        display: none;
-      }
-
-      .resume-menu {
-        //margin-left: 11px;
-        //border-right: 1px solid $gray;
-        margin-top: -3px;
-        height: 100%;
-        color: $gray;
-        text-align: center;
-        //width: $menuSize;
-        //min-width: $menuSize;
-        //max-width: $menuSize;
-        display: none;
-        width: 0;
-        max-width: 0;
-        min-width: 0;
-
-        a {
-          display: none;
-          //visibility: hidden;
-          text-underline: none;
-          text-decoration: none;
+        h2 {
+          text-align: center;
         }
 
-        .profile {
-          display: none;
-          //visibility: visible;
-          img {
-            $isize: 80px;
-            position: absolute;
-            top: 95px;
-            width: $isize;
-            height: $isize;
-            //left: 50%;
-            //transform: translateX(-60%);
+        .user-icon {
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          margin-bottom: 25px;
+          font-size: 1.2em;
+        }
+
+        .job-name {
+          font-size: 1.2em;
+          width: 100%;
+          margin-top: 50px;
+        }
+
+        .job-time {
+          border-bottom: 1px solid black;
+        }
+
+        .job-title {
+          font-family: 'Roboto';
+          margin-top: 25px;
+          margin-bottom: 5px;
+          .job-time {
+            border: none;
           }
         }
 
-        .sub-menu {
-          display: none;
-        }
-
-        h4 {
-          visibility: visible;
-          color: $gray;
-          font-size: 28px;
-          margin-top: 30px;
-        }
-      }
-
-      .col {
-        position: static !important;
-      }
-
-      .resume-content {
-        padding: 0;
-        margin-right: 11px;
-
-        &-container {
-          padding: 25px;
-
-          h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 600;
-          }
-
-          bcd-rating-circle {
-            display: none;
-          }
-        }
-
-        .resume-personal-info {
-          .row {
-            font-size: 15px;
-          }
-
-          .row-key {
-            font-family: Roboto, Bold;
-            width: 165px;
-          }
-        }
-
-        .resume-education {
-          background-color: $lightgray;
-
-          .education-row {
-            padding-top: 10px;
-            padding-bottom: 10px;
-          }
-
-          .col-9 {
-            .row:first-child {
-              font-size: 16px;
-              font-family: Roboto, Bold;
-            }
-            .row:last-child {
-              font-style: italic;
-            }
-          }
-        }
-
-        .resume-experience {
-          .row {
-            padding-top: 8px;
-            padding-bottom: 8px;
-
-            .col-3 {
-              //float: right;
-              position: absolute;
-              right: 20px;
-              text-align: right;
-            }
-          }
-
+        .project-containers {
           .job-name {
-            font-size: 18px;
-            font-family: Roboto, Bold;
-          }
-
-          .job-title {
-            font-size: 16px;
-            font-family: Roboto, Regular;
-          }
-
-          .job-description {
-            font-size: 14.5px;
+            margin-top: 15px;
           }
         }
-
-        .resume-skills, .resume-languages, .resume-technology, .resume-references {
-          padding: 15px 0 15px 0;
-          display: none;
-
-          .row {
-            font-size: 15px;
-          }
-        }
-
-        .resume-skills {
-          display: none;
-          position: absolute;
-          top: 50px;
-          left: 0;
-          width: $menuSize;
-          text-align: center;
-
-          .row {
-            div {
-              width: 100%;
-              min-width: 100%;
-            }
-            h4 {
-              font-size: 15.0px;
-              color: $pdfGray;
-            }
-          }
-        }
-
-        .resume-languages {
-          position: absolute;
-          top: 430px;
-          left: 0;
-          width: $menuSize;
-          text-align: center;
-
-          .row {
-            margin-left: 7px;
-            text-align: center;
-            padding: 3px;
-
-            .col-lang {
-              color: $pdfGray;
-              padding-right: 0;
-              text-align: left;
-              font-size: 15px;
-              width: 90px;
-              min-width: 90px;
-            }
-
-            .col-lang-rating {
-              width: 100px;
-              max-width: 100px;
-
-              bcd-rating {
-                --bcd-rating-size: 7px;
-                --bcd-rating-border-width: 1;
-                --bcd-rating-empty-color: #c0c0c0;
-                --bcd-rating-border-color: #c0c0c0;
-              }
-            }
-          }
-        }
-
-        .resume-technology {
-          position: absolute;
-          top: 970px;
-          left: 0;
-          width: $menuSize;
-          color: $gray;
-          text-align: center;
-
-          .row {
-            text-align: center;
-            color: $pdfGray;
-            font-size: 15px;
-            line-height: 25px;
-          }
-        }
-
-        .resume-references {
-          position: absolute;
-          top: 1330px;
-          left: 0;
-          text-align: center;
-
-          h4 {
-            font-size: 16px;
-            font-style: italic;
-          }
-        }
-
-        .show-pdf {
-          display: initial;
-        }
-
-        .hide-pdf {
-          display: none;
-        }
-
       }
-    }
-
-    .hidden {
-      display: none;
     }
   }
 }
-
