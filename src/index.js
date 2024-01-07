@@ -68,6 +68,7 @@ const createObservers = () => {
 	observer.observe(document.querySelector('#skills'));
 	observer.observe(document.querySelector('#languages'));
 	observer.observe(document.querySelector('#technology'));
+	observer.observe(document.querySelector('#certifications'));
 	observer.observe(document.querySelector('#references'));
 
 	window.onscroll = onScroll;

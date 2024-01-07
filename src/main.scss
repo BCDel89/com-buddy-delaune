@@ -464,6 +464,7 @@ body {
     .resume-references,
     .resume-education,
     .resume-skills,
+    .resume-certifications,
     .resume-technology {
       $hPad: 3vh;
       height: auto;
@@ -505,8 +506,20 @@ body {
       }
     }
 
-    .resume-personal-info,
-    .resume-education {
+    .resume-certifications {
+      img {
+        width: 50%;
+        height: auto;
+        max-width: 200px;
+        min-width: 100px;
+      }
+
+      h5 {
+        margin-top: 10px;
+      }
+    }
+
+    .resume-personal-info, .resume-education {
       padding-left: 10vw;
       padding-right: 10vw;
 
@@ -516,7 +529,7 @@ body {
       }
     }
 
-    .resume-personal-info, .resume-experience, .resume-languages, .resume-references {
+    .resume-certifications, .resume-personal-info, .resume-experience, .resume-languages, .resume-references {
       background-color: white;
     }
 

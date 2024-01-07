@@ -212,7 +212,7 @@ $menuSize: 0;
         .resume-experience {
           clear: both;
           background: white;
-          margin-bottom: 50px;
+          margin-bottom: 20px;
 
           .row {
             padding-top: 8px;
@@ -273,6 +273,19 @@ $menuSize: 0;
               margin: 2px;
               //color: $pdfGray;
             }
+          }
+        }
+
+        .resume-certifications {
+          background-color: $lineAndBkg;
+          clear: both;
+
+          .row {
+            text-align: center;
+          }
+
+          img {
+            height: 150px;
           }
         }
 
