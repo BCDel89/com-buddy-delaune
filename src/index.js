@@ -64,7 +64,6 @@ const createObservers = () => {
 	observer.observe(document.querySelector('#experience-urs'));
 	observer.observe(document.querySelector('#experience-ba'));
 	observer.observe(document.querySelector('#experience-xennex'));
-	observer.observe(document.querySelector('#experience-ab'));
 	observer.observe(document.querySelector('#skills'));
 	observer.observe(document.querySelector('#languages'));
 	observer.observe(document.querySelector('#technology'));
