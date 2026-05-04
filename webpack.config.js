@@ -16,7 +16,9 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		contentBase: 'dist',
-		watchContentBase: true
+		watchContentBase: true,
+		host: '0.0.0.0',
+		disableHostCheck: true
 	},
 	plugins: [
 		cleanWebpackPlugin,

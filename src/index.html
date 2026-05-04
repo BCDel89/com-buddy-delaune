@@ -1,1273 +1,635 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senior Engineering Manager and full-stack architect based in New Orleans. Leading software at Leviton Manufacturing; founder of XenneX LLC.">
+    <meta name="theme-color" content="#0a0b0d">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 
     <link rel="stylesheet" type="text/css" media="screen" href="./main.min.css">
-<!--    <link rel="stylesheet" type="text/css" media="screen" href="./print.min.css">-->
-
-    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 767px)" href="./mobile.min.css">
     <link rel="stylesheet" type="text/css" media="print" href="./print.min.css">
+
     <link rel="icon" type="image/png" href="./assets/img/favIcon@64.png">
-    <title>Buddy C Delaune</title>
+    <script src="https://kit.fontawesome.com/ab868b7962.js" crossorigin="anonymous"></script>
+
+    <title>Buddy C Delaune — Senior Engineering Manager &amp; Full-Stack Architect</title>
 </head>
 
 <body>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/ab868b7962.js" crossorigin="anonymous"></script>
-<script type="module"
-        src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
-<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-<script src="/bundle.js"></script>
+<div class="grid-bg" aria-hidden="true"></div>
 
-<div id="site-wrapper" class="site-wrapper full-height">
+<header class="topbar hide-pdf">
+    <a href="#top" class="topbar-brand">
+        <span class="topbar-mark">BCD</span>
+        <span class="topbar-name">Buddy Delaune</span>
+    </a>
+    <nav class="topbar-nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="topbar-print" type="button" onclick="window.print()" aria-label="Print resume">
+        <i class="fas fa-print"></i>
+        <span>Print</span>
+    </button>
+</header>
 
-    <div class="site-wrapper-inner" id="cover">
-        <nav class="nav nav-left" data-scroll>
-            <div class="row">
-                <a href="#resumemenu">
-                    <div> Resume</div>
-                </a>
-                <a href="#cover">
-                    <div> Portfolio</div>
-                </a>
-                <a href="#cover">
-                    <div>
-                        Quote
-                    </div>
-                </a>
-            </div>
-        </nav>
+<div id="site-wrapper" class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div id="resumecontent" class="resume-content">
 
-        <div class="cover-container" id="covercontainer">
+            <main class="container" id="top">
 
-            <div>
-                <div>
-                    <h1 class="masthead-brand"></h1>
-                </div>
-            </div>
+                <!-- ─── Hero ─────────────────────────────────────────────────── -->
+                <section class="hero" data-reveal>
+                    <p class="mono-label">/ portfolio &middot; r&eacute;sum&eacute;</p>
 
-            <div class="glass-panel-bkg"></div>
-            <div class="glass-panel">
+                    <h1 class="pdf-title show-pdf">Buddy C Delaune</h1>
 
-                <div class="profile-cont">
-                    <img class="user-icon" src="assets/img/site-pic-me.png" alt="Profile Picture">
-                </div>
+                    <h1 class="hero-name hide-pdf">
+                        Buddy<br>Delaune<span class="hero-dot">.</span>
+                    </h1>
 
-                <div id="glasspanelcontent" class="glass-panel-content">
-
-                    <h1 class="buddy-delaune">Buddy Delaune</h1>
-                    <br>
-                    <p class="d-none d-md-block">
-                        An experienced Senior Engineering Manager with a demonstrated history of
-                        working
-                        in the field of technology. Skilled in Software Architecture, Mobile & Web Applications, Cloud
-                        Infrastructure &
-                        Development, Database Design and Administration, team management, Scrum, and more with a
-                        Bachelor of
-                        Science (B.S.) focused in Computer Science from Louisiana State University.
+                    <p class="hero-role hide-pdf">
+                        Senior Engineering Manager &middot; Full-Stack Architect &middot; New Orleans
                     </p>
-                </div>
 
-                <a href="#resume">
-                    <button class="scroll-to-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                </a>
-            </div>
-
-        </div>
-
-        <div></div>
-
-        <div class="row resume" id="resume">
-            <div class="resume-menu sticky d-none d-sm-none d-md-block col-3" id="resumemenu">
-
-                <a href="#cover">
-                    <div class="profile">
-                        <img class="user-icon" src="assets/img/profile.png" alt="Profile Picture">
+                    <div class="show-pdf pdf-contact-strip">
+                        New Orleans, LA &nbsp;&middot;&nbsp; buddy.delaune@gmail.com &nbsp;&middot;&nbsp; (504) 352-0118 &nbsp;&middot;&nbsp; linkedin.com/in/buddycdelaune &nbsp;&middot;&nbsp; buddycdelaune.com
                     </div>
 
-                    <h4 id="resume-menu-name">Buddy Delaune</h4>
-
-                </a>
-
-
-                <a tabindex="0" href="#info" id="nav-btn-info">
-                    <div class="menu-btn">
-                        Personal Info
+                    <div class="show-pdf pdf-summary">
+                        Senior Engineering Manager and full-stack architect with 10+ years shipping production software across mobile, web, and cloud. Led multi-team organizations at Leviton delivering smart-home products to 1M+ users. Independently launched multiple consumer apps and SaaS products &mdash; from 100k-download mobile games to AI-powered subscription services. Deep expertise in TypeScript, Node.js, Ionic, Angular, AWS, and LLM-integrated architectures.
                     </div>
-                </a>
 
-                <a tabindex="1" href="#education" id="nav-btn-education">
-                    <div class="menu-btn">
-                        Education
-                    </div>
-                </a>
-
-                <a tabindex="2" href="#experience" id="nav-btn-experience">
-                    <div class="menu-btn">
-                        Work Experience
-                    </div>
-                </a>
-
-                <div class="sub-menu">
-                    <a tabindex="3" href="#experience-leviton" id="nav-btn-experience-leviton">
-                        <div class="menu-btn">
-                            Leviton
-                        </div>
-                    </a>
-                    <a tabindex="3" href="#experience-xennex" id="nav-btn-experience-xennex">
-                        <div class="menu-btn">
-                            XenneX LLC
-                        </div>
-                    </a>
-                    <a tabindex="3" href="#experience-nion" id="nav-btn-experience-nion">
-                        <div class="menu-btn">
-                            Nion Lights
-                        </div>
-                    </a>
-                    <a tabindex="3" href="#experience-ba" id="nav-btn-experience-ba">
-                        <div class="menu-btn">
-                            B&A Technologies
-                        </div>
-                    </a>
-                    <a tabindex="3" href="#experience-urs" id="nav-btn-experience-urs">
-                        <div class="menu-btn">
-                            AECOM/URS
-                        </div>
-                    </a>
-                </div>
-
-                <div class="show-pdf">
-                    <div class="empty-block"></div>
-                </div>
-
-                <a tabindex="3" href="#certifications" id="nav-btn-certifications">
-                    <div class="menu-btn">
-                        Certifications
-                    </div>
-                </a>
-
-                <a tabindex="4" href="#languages" id="nav-btn-languages">
-                    <div class="menu-btn">
-                        Languages & Frameworks
-                    </div>
-                </a>
-
-                <a tabindex="5" href="#technology" id="nav-btn-technology">
-                    <div class="menu-btn">
-                        Tools & Technology
-                    </div>
-                </a>
-
-                <a tabindex="6" href="#skills" id="nav-btn-skills">
-                    <div class="menu-btn">
-                        Skills
-                    </div>
-                </a>
-
-                <a tabindex="7" href="#references" id="nav-btn-references">
-                    <div class="menu-btn">
-                        References
-                    </div>
-                </a>
-
-            </div>
-
-            <div id="resumecontent" class="resume-content col" data-spy="scroll" data-target="#resumemenu"
-                 data-offset="0">
-
-                <h1 class="pdf-title show-pdf text-center">Buddy C Delaune</h1>
-
-                <div class="show-pdf pdf-contact-strip">
-                    New Orleans, LA &nbsp;&middot;&nbsp; buddy.delaune@gmail.com &nbsp;&middot;&nbsp; (504) 352-0118 &nbsp;&middot;&nbsp; linkedin.com/in/buddycdelaune &nbsp;&middot;&nbsp; buddycdelaune.com
-                </div>
-
-                <div class="show-pdf pdf-summary">
-                    Senior Engineering Manager and full-stack architect with 10+ years shipping production software across mobile, web, and cloud. Led multi-team organizations at Leviton delivering smart-home products to 1M+ users. Independently launched multiple consumer apps and SaaS products — from 100k-download mobile games to AI-powered subscription services. Deep expertise in TypeScript, Node.js, Ionic, Angular, AWS, and LLM-integrated architectures.
-                </div>
-
-                <div data-scroll class="full-height resume-personal-info" id="info">
-
-                    <nav class="nav nav-right nav-right-print" id="nav-right-print">
-                        <a href="https://www.linkedin.com/in/buddycdelaune" target="_blank">
-                            <div>
-                                <i class="fab fa-linkedin"></i>
-                            </div>
+                    <div class="hero-actions hide-pdf">
+                        <a class="btn btn-primary" href="mailto:buddy.delaune@gmail.com">
+                            <i class="far fa-envelope"></i> Email
                         </a>
-                        <a href="https://github.com/BCDel89?tab=repositories" target="_blank">
-                            <div>
-                                <i class="fab fa-github"></i>
-                            </div>
+                        <a class="btn btn-ghost" href="https://www.linkedin.com/in/buddycdelaune" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
-                        <a href="">
-                            <div id="saveBtn" onclick="print()">
-                                <i class="fas fa-print"></i>
-                            </div>
+                        <a class="btn btn-ghost" href="https://github.com/BCDel89?tab=repositories" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-                    </nav>
-
-                    <div class="resume-content-container">
-
-                        <!--                    <a href="#site-wrapper">-->
-                        <!--                        <button class="scroll-to-arrow scroll-to-top-arrow sticky-top">-->
-                        <!--                            <i class="fas fa-chevron-up"></i>-->
-                        <!--                        </button>-->
-                        <!--                    </a>-->
-
-                        <div class="user-icon">
-                            <svg class="bi bi-person-fill" width="50px" height="50px" viewBox="0 0 16 16"
-                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
-                                      clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-
-                        <h3 class="hidden personal-information">Personal Information</h3>
-
-<!--                        <h2 class="resume-menu-name show-pdf">-->
-<!--                            Buddy C Delaune-->
-<!--                        </h2>-->
-
-                        <h3 class="resume-block-header show-pdf">
-                            Information
-                        </h3>
-                        <!--                        <div class="show-pdf">-->
-                        <!--                            <div class="row">-->
-                        <!--                                <div class="col-3">-->
-                        <!--                                    New Orleans, Louisiana 70122-->
-                        <!--                                </div>-->
-                        <!--                                <div class="col-3">-->
-                        <!--                                    buddy.delaune@gmail.com-->
-                        <!--                                </div>-->
-                        <!--                                <div class="col-3">-->
-                        <!--                                    (504) 352-0118-->
-                        <!--                                </div>-->
-                        <!--                                <div class="col-3">-->
-                        <!--                                    buddycdelaune.com-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
-
-                        <div class="personal-information-content">
-                            <div class="row">
-                                <div class="row-key">
-                                    Address
-                                </div>
-                                <div class="row-value">
-                                    New Orleans, Louisiana 70122
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="row-key">
-                                    Email
-                                </div>
-                                <div class="row-value">
-                                    <a href="mailto:buddy.delaune@gmail.com">
-                                        buddy.delaune@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="row-key">
-                                    Cell Phone
-                                </div>
-                                <div class="row-value">
-                                    (504) 352 - 0118
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="row-key">
-                                    LinkedIn
-                                </div>
-                                <div class="row-value">
-                                    <a href="https://www.linkedin.com/in/buddycdelaune">
-                                        https://www.linkedin.com/in/buddycdelaune
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="row-key">
-                                    Web
-                                </div>
-                                <div class="row-value">
-                                    <a href="https://buddycdelaune.com">
-                                        https://buddycdelaune.com
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <a class="btn btn-ghost" href="https://xennex.app" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> XenneX
+                        </a>
                     </div>
-                </div>
 
-                <div class="empty-block"></div>
-
-                <div data-scroll class="full-height resume-education" id="education">
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                    <dl class="hero-meta hide-pdf">
+                        <div>
+                            <dt>Currently</dt>
+                            <dd>Sr. Engineering Manager at Leviton</dd>
                         </div>
-
-                        <h3 class="resume-block-header">Education</h3>
-
-                        <div class="row education-row">
-                            <div class="col-3">
-                                <div class="date">
-                                    2007
-                                </div>
-                            </div>
-                            <div class="col-9">
-                                <div class="row">
-                                    Brother Martin Catholic High School
-                                </div>
-                                <div class="row">
-                                    4401 Elysian Fields Ave, New Orleans, LA 70122
-                                </div>
-                            </div>
+                        <div>
+                            <dt>Studio</dt>
+                            <dd>Founder, <a href="https://xennex.app" target="_blank" rel="noopener">XenneX LLC</a></dd>
                         </div>
-
-                        <div class="row education-row">
-                            <div class="col-3">
-                                <div class="date">
-                                    2015
-                                </div>
-                            </div>
-                            <div class="col-9">
-                                <div class="row">
-                                    Louisiana State University
-                                </div>
-                                <div class="row">
-                                    Bachelors Degree in Computer Science with a concentration in Software Development
-                                </div>
-                                <div class="row">
-                                    Baton Rouge, LA 70803
-                                </div>
-                            </div>
+                        <div>
+                            <dt>Based</dt>
+                            <dd>New Orleans, Louisiana</dd>
                         </div>
-                    </div>
-                </div>
+                    </dl>
+                </section>
 
-                <div class="show-pdf pdf-break"></div>
-                <div class="empty-block"></div>
+                <!-- ─── About ─────────────────────────────────────────────────── -->
+                <section id="about" class="section hide-pdf" data-reveal>
+                    <p class="mono-label">/ about</p>
+                    <h2 class="section-title">Engineer who ships, leader who scales.</h2>
 
-                <div data-scroll class="full-height resume-experience hidden desktop-experience" id="experience">
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-building"></i>
+                    <div class="about-grid">
+                        <div class="about-copy">
+                            <p>
+                                I&apos;m a Senior Engineering Manager and full-stack architect with over a decade
+                                of building and shipping production software across mobile, web, and cloud. By
+                                day I lead four teams at <strong>Leviton Manufacturing</strong> &mdash; residential,
+                                commercial, and industrial smart-home applications that reach more than a million
+                                users and several million devices.
+                            </p>
+                            <p>
+                                By night and weekend I run <strong>XenneX</strong>, my independent studio. Since
+                                2014 it&apos;s shipped mobile games with hundreds of thousands of downloads,
+                                consumer web apps, and most recently AI-powered subscription products. I co-founded
+                                <strong>Nion Lights</strong> with Hunt Navar in 2024, building LED wearable
+                                accessories for raves and festivals.
+                            </p>
+                            <p>
+                                The same person who sketches the data model takes the on-call page when the API
+                                misbehaves at 2 a.m. &mdash; which makes for boring on-call shifts and sturdy
+                                systems.
+                            </p>
                         </div>
-
-                        <h3>Work Experience</h3>
-
-                        <div class="row" id="experience-leviton">
-                            <div class="col-3">
-                                May 2015 - present
-                            </div>
-
-                            <ul class="col-9">
-
-                                <div class="job-name">
-                                    Leviton Manufacturing Co Inc, New Orleans, La
-                                </div>
-
-                                <div class="job-title">
-                                    <div>
-                                        <i>[2018 - present]</i> - Senior Software Engineering Manager (App & Cloud)
-                                    </div>
-                                    <div>
-                                        <i>[2015 - 2018]</i> - Full Stack Software Engineer
-                                    </div>
-                                </div>
-
-                                <p class="job-description">
-                                    Work closely with product managers and UX designers to design, develop, and
-                                    implement
-                                    the smart
-                                    home technology needs of the market and our customers all around the world
-                                    using cutting edge technologies. Front-end work consists of creating dynamic mobile
-                                    and
-                                    web
-                                    applications that can communicate with devices through means of Bluetooth, Wi-Fi,
-                                    and
-                                    various RF protocols, but
-                                    also to Leviton Cloud Services via RESTful APIs. Back-end work consists of
-                                    creating new cloud service APIs, client libraries, and developing new integrations
-                                    with
-                                    other
-                                    Smart Home Technology partners including but not limited to Samsung, Google, Amazon,
-                                    and
-                                    Apple.
-
-
-                                    <span class="show-pdf">
-                                        Managed and developed Leviton's paramount mobile/web
-                                        application, cloud services, and smart device ecosystem
-                                        with over 1 million users and several million devices sold.
-                                   </span>
-
-                                    <span class="hide-pdf">
-                                        Notable projects include:
-                                    </span>
-
-                                </p>
-
-                                <ul class="project-containers hide-pdf">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            My Leviton - Published 2017 -
-                                            <a href="https://my.leviton.com" target="_blank">my.leviton.com</a>
-                                            <br>
-                                            <small>iOS (4.4 stars), Android (4.2 stars), Web</small>
-                                            <br>
-                                            <small>> 1,000,000 users</small>
-                                            <br>
-                                            <small>> Several million devices</small>
-                                            <br>
-                                        </div>
-                                        <p class="job-description">
-                                            Managed and developed Leviton's paramount mobile/web
-                                            application, cloud services, and smart device ecosystem. Including but not
-                                            limited to devices such as:
-                                        <ul class="job-description">
-                                            <li>
-                                                Decora Smart Gen I / Gen II Devices
-                                                <ul>
-                                                    <li>Wi-Fi In-wall Dimmer</li>
-                                                    <li>Wi-Fi In-wall Switch</li>
-                                                    <li>Wi-Fi Fan Speed Controller</li>
-                                                    <li>Wi-Fi Load Control Module</li>
-                                                    <li>Wi-Fi Smart Receptacle</li>
-                                                    <li>Anywhere Companion</li>
-                                                    <li>4 Button Scene Controller & Scene Controller Switch</li>
-                                                    <li>Decora Voice In-wall Dimmer</li>
-                                                    <li>Wi-Fi Outdoor Plugin</li>
-                                                    <li>Wi-Fi GFCI Receptacle</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Leviton Load Center
-                                                <ul>Gen I / Gen II Smart Energy Monitors</ul>
-                                                <ul>Gen I / Gen II Smart Breakers</ul>
-                                            </li>
-                                            <li>
-                                                Wi-Fi EV Charger
-                                            </li>
-                                        </ul>
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Decora Smart Home - Published 2015 -
-                                            <a href="https://appadvice.com/app/decora-smart-home/1077472630"
-                                               target="_blank">Discontinued 2023</a>
-                                            <br>
-                                        </div>
-                                        <p class="job-description">
-                                            Developed Leviton's original HomeKit app to pair, configure, and control the
-                                            Gen I HomeKit capable product line.
-                                        </p>
-                                    </li>
-                                </ul>
+                        <aside class="about-side">
+                            <h3>Stack</h3>
+                            <ul class="tag-list">
+                                <li>TypeScript</li>
+                                <li>Node.js</li>
+                                <li>Angular</li>
+                                <li>Ionic</li>
+                                <li>NestJS</li>
+                                <li>AWS</li>
+                                <li>GCP</li>
+                                <li>Python</li>
+                                <li>LLMs</li>
                             </ul>
+                            <h3>Focus</h3>
+                            <ul class="tag-list">
+                                <li>AI workflows</li>
+                                <li>Cloud architecture</li>
+                                <li>Mobile</li>
+                                <li>Team leadership</li>
+                            </ul>
+                        </aside>
+                    </div>
+                </section>
 
-                        </div>
+                <!-- ─── Selected Work ─────────────────────────────────────────── -->
+                <section id="work" class="section hide-pdf" data-reveal>
+                    <p class="mono-label">/ selected work</p>
+                    <h2 class="section-title">Things I&apos;ve shipped.</h2>
+                    <p class="section-lede">
+                        A small slice of independent projects through XenneX. The full archive lives at
+                        <a href="https://xennex.app" target="_blank" rel="noopener">xennex.app</a>.
+                    </p>
 
-                        <div data-scroll class="row" id="experience-xennex">
+                    <div class="work-grid">
 
-                            <div class="col-3">
-                                2014 - present
+                        <article class="work-card work-card-feature">
+                            <div class="work-card-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-status work-status-new">New</span>
                             </div>
+                            <h3 class="work-name">AI Recaps</h3>
+                            <p class="work-tagline">YouTube, summarized. Your inbox, curated.</p>
+                            <p class="work-desc">
+                                AI-powered YouTube video summarization with subscription billing, scheduled
+                                email digests, Groq Whisper transcription fallback, and an AI Chat feature
+                                for going deeper on any video.
+                            </p>
+                            <ul class="work-tags">
+                                <li>Ionic</li>
+                                <li>NestJS</li>
+                                <li>AWS ECS Fargate</li>
+                                <li>Stripe</li>
+                                <li>Groq</li>
+                            </ul>
+                            <a href="https://airecaps.com" target="_blank" rel="noopener" class="work-link">
+                                airecaps.com <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
-                            <div class="col-9">
-
-                                <div class="job-name">
-                                    XenneX LLC (Sole Proprietorship), New Orleans, La
-                                    <span class="hide-pdf">
-                                        - <a href="https://xennex.app" target="_blank">www.xennex.app</a>
-                                    </span>
-                                </div>
-                                <div class="job-title">
-                                    Founder/Full Stack Developer
-                                </div>
-                                <p data-scroll class="job-description">
-                                    Sole Designer and Full Stack Developer for applications published for GooglePlay,
-                                    iTunes, and the Amazon App Store.
-                                    Some technologies used include Lua, Javascript, Typescript, Html, CSS, Sass,
-                                    AngularJs-8, Cordova, Ionic 1-5, nodejs, python, MySQL, Datastore, AWS, and GCP.
-                                    Notable projects include:
-                                    <span class="show-pdf">AI Recaps, Unobtainium, Redinfinite, WSB Stock Tracker, Game Night, Rent Buddy, Comet, Cosmic Crush, A Layman's BAC Calculator.</span>
-                                </p>
-
-                                <ul class="project-containers hide-pdf">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            AI Recaps - Launched 2026 -
-                                            <a href="https://airecaps.com" target="_blank">airecaps.com</a>
-                                            <br>
-                                            <small>iOS, Android, Web, PWA</small>
-                                        </div>
-                                        <p class="job-description">
-                                            AI-powered YouTube video summarization service. Subscribers get instant AI
-                                            summaries, audio transcription fallback via Groq Whisper, scheduled email
-                                            digests, and an AI Chat feature. Built on AWS ECS Fargate with an
-                                            Ionic/Angular frontend and NestJS API.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Dealery - Published 2022 -
-                                            <a href="https://dealery.io" target="_blank">dealery.io</a>
-                                            <br>
-                                            <small>Web, PWA</small>
-                                        </div>
-                                        <p class="job-description">
-                                            Dealery is an all-in-one online deal consolidation service that puts all the
-                                            best deals across the web in one place for your convenience.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Unobtainium - Published 2021 -
-                                            <a href="https://unobtainium.app" target="_blank">www.unobtainium.app</a>
-                                            <br>
-                                            <small>Android, Web, PWA</small>
-                                        </div>
-                                        <p class="job-description">
-                                            A stock product notification service to help customers beat the scalpers and
-                                            get a hold of the products they desire.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            WSB Stock Tracker - Published 2021 -
-                                            <a href="https://wsbstocktracker.com" target="_blank">www.wsbstocktracker.com</a>
-                                            <br>
-                                            <small>Web, PWA</small>
-                                        </div>
-                                        <p class="job-description">
-                                            The Wall Street Bets stock tracker is a quick tracker app that monitors the
-                                            top stock tickers and cryptos talked about from popular Reddit subs
-                                            including: r/wallstreetbets, r/pennystocks, r/cryptocurrency.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Game Night - Published 2021 -
-                                            <a href="https://play.google.com/store/apps/details?id=io.xennex.gamenight"
-                                               target="_blank">Available on Google Play</a>
-                                            <br>
-                                            <small>Android (4.3 stars)</small>
-                                            <br>
-                                            <small>> 100,000 downloads</small>
-                                        </div>
-                                        <p class="job-description">
-                                            Game Night is a fun adult oriented drinking game made to help get the party
-                                            started. Play it with your friends, family, or strangers we have a rule-set
-                                            for everybody 21 and over.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Comet - Published 2015 -
-                                            <a href="https://play.google.com/store/apps/details?id=com.XenneX.BCDel89.Comet&hl=en_US&gl=US">
-                                                Available on Google Play
-                                            </a>
-                                            <br>
-                                            <small>iOS, Android</small>
-                                        </div>
-                                        <p class="job-description">
-                                            A competitive space game where users control a comet and dodge planets to
-                                            protect the solar system.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Redinfinite - Published 2019 -
-                                            <a href="https://redinfinite.com" target="_blank">www.redinfinite.com</a>
-                                            <br>
-                                            <small>Web, PWA (DISCONTINUED)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            Redinfinite is an infinite Reddit scroller application. Choose one of the
-                                            catered subs or add your own, choose your settings, and with one click of
-                                            the button get infinite Reddit content delivered to you in a tinder card
-                                            based fashion.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Rent Buddy - Private Beta 2020
-                                            <!--                                            - -->
-                                            <!--                                            <a href="https://rent-buddy.com" target="_blank">www.rent-buddy.com</a>-->
-                                            <br>
-                                            <small>Android, iOS, Web, PWA (DISCONTINUED)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            Rent Buddy is a peer-to-peer rental service app that allows users to connect
-                                            and share their tools, un-used items, skills, and services with other people
-                                            for cash.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Cosmic Crush - Published 2014 -
-                                            <a href="https://m.apkpure.com/cosmic-crush/com.yahoo.BCDel89.CosmicCrush"
-                                               target="_blank">
-                                                Available on Apk Pure
-                                            </a>
-                                            <br>
-                                            <small>iOS, Android, Amazon (DISCONTINUED)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            A fun puzzle game where users match gems to earn points and make there way
-                                            through the solar system.
-                                        </p>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            A Layman's BAC Calculator - Published 2014 -
-                                            <a href="https://www.amazon.com/XenneX-LLC-Laymans-BAC-Calculator/dp/B00UIL522C"
-                                               target="_blank">
-                                                Amazon App Store
-                                            </a>
-                                            <br>
-                                            <small>iOS, Android, Amazon (DISCONTINUED)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            A simple blood alcohol content calculator app.
-                                        </p>
-                                    </li>
-                                </ul>
+                        <article class="work-card">
+                            <div class="work-card-meta">
+                                <span class="work-year">2022</span>
                             </div>
-                        </div>
+                            <h3 class="work-name">Dealery</h3>
+                            <p class="work-tagline">All the best deals on the web, in one place.</p>
+                            <p class="work-desc">
+                                Online deal-consolidation service that aggregates the best deals across the
+                                web into a single scannable feed.
+                            </p>
+                            <ul class="work-tags">
+                                <li>Ionic</li>
+                                <li>Node.js</li>
+                                <li>MySQL</li>
+                                <li>AWS</li>
+                            </ul>
+                            <a href="https://dealery.io" target="_blank" rel="noopener" class="work-link">
+                                dealery.io <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
-                        <div data-scroll class="row" id="experience-nion">
-
-                            <div class="col-3">
-                                2024 - present
+                        <article class="work-card">
+                            <div class="work-card-meta">
+                                <span class="work-year">2021</span>
+                                <span class="work-status">100k+ &bigstar; 4.3</span>
                             </div>
+                            <h3 class="work-name">Game Night</h3>
+                            <p class="work-tagline">Adult party game for getting things started.</p>
+                            <p class="work-desc">
+                                Card-style party game with rule-sets for everyone 21 and over. 100,000+
+                                downloads on Google Play, 4.3 stars.
+                            </p>
+                            <ul class="work-tags">
+                                <li>Ionic</li>
+                                <li>Angular</li>
+                                <li>Loopback</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <a href="https://play.google.com/store/search?q=game+night+xennex" target="_blank" rel="noopener" class="work-link">
+                                Google Play <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
-                            <div class="col-9">
-
-                                <div class="job-name">
-                                    Nion Lights LLC, New Orleans, La
-                                    <span class="hide-pdf">
-                                        - <a href="https://nionlights.com" target="_blank">nionlights.com</a>
-                                    </span>
-                                </div>
-                                <div class="job-title">
-                                    Co-Founder / Full Stack Developer
-                                </div>
-                                <p class="job-description">
-                                    Co-founded an LED wearable accessories brand for raves, festivals, and EDM culture.
-                                    Responsible for product development, firmware, web infrastructure, and e-commerce.
-                                    Notable projects include:
-                                </p>
-
-                                <ul class="project-containers hide-pdf">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Animated LED Glow Belt - Current Hero Product
-                                            <br>
-                                            <small>Hardware, E-Commerce (Shopify, Etsy)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            Animated LED belt with custom WLED firmware running on ESP32. Sold through
-                                            Shopify and Etsy. Kickstarter campaign in development.
-                                        </p>
-                                    </li>
-                                </ul>
+                        <article class="work-card">
+                            <div class="work-card-meta">
+                                <span class="work-year">2021</span>
                             </div>
-                        </div>
+                            <h3 class="work-name">Unobtainium</h3>
+                            <p class="work-tagline">Beat the scalpers. Get the gear.</p>
+                            <p class="work-desc">
+                                Stock-product notification service that helps customers get a hold of
+                                out-of-stock products before scalpers do.
+                            </p>
+                            <ul class="work-tags">
+                                <li>Ionic</li>
+                                <li>Loopback</li>
+                                <li>MySQL</li>
+                                <li>DigitalOcean</li>
+                            </ul>
+                            <a href="https://unobtainium.app" target="_blank" rel="noopener" class="work-link">
+                                unobtainium.app <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
-                        <div data-scroll class="row" id="experience-ba">
+                        <article class="work-card">
+                            <div class="work-card-meta">
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-name">Nion Lights</h3>
+                            <p class="work-tagline">LED wearables for raves &amp; festivals.</p>
+                            <p class="work-desc">
+                                Co-founded brand for animated LED wearable accessories. Hero product:
+                                Animated LED Glow Belt. Shopify + Etsy storefronts; Kickstarter in planning.
+                            </p>
+                            <ul class="work-tags">
+                                <li>ESP32</li>
+                                <li>WLED</li>
+                                <li>Shopify</li>
+                                <li>3D Design</li>
+                            </ul>
+                            <a href="https://nionlights.com" target="_blank" rel="noopener" class="work-link">
+                                nionlights.com <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
-                            <div class="col-3">
-                                December 2015 - 2019
+                        <article class="work-card">
+                            <div class="work-card-meta">
+                                <span class="work-year">2021</span>
                             </div>
-                            <div class="col-9">
-
-                                <div class="job-name">
-                                    B&A Technologies
-                                </div>
-                                <div class="job-title">
-                                    Co-founder/CTO/Lead Full Stack Developer
-                                </div>
-                                <p data-scroll class="job-description">
-                                    Mobile/Web application development. Front-end technologies include: Lua, Cordova,
-                                    html,
-                                    CSS, Sass, AngularJs. Back-end technologies include: GCP, Datastore, and python.
-                                    Notable
-                                    Project:
-                                    Zarba (iOS, Android) - discontinued 2018
-                                </p>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row" id="experience-urs">
-                            <div class="col-3">
-                                July 2013 - May-2015
-                            </div>
-                            <div class="col-9">
-                                <div class="job-name">
-                                    URS / AECOM Company, Baton Rouge, La
-                                </div>
-                                <div class="job-title">
-                                    Programmer
-                                </div>
-                                <p class="job-description">
-                                    Helped maintain and update a disaster recovery related online application storage
-                                    and
-                                    processing system. Acted as a helpdesk support administrator to serve the
-                                    programming
-                                    and data needs of coroworkers all around the country. Programming work consisted of:
-                                    using scripting languages to automate daily tasks and routines, updating two
-                                    front-end
-                                    web apps (written with ASP.net, c#, and the web dev technologies), maintaining two
-                                    native iOS (ipad only) applications (written in objective-c), and managing two
-                                    sizable
-                                    databases (one written in Oracle the other in SQLServer) in which my duties included
-                                    performing script optimization and database development tasks like
-                                    creating/modifying tables, views, and
-                                    procedures.
-                                </p>
-                            </div>
-                        </div>
+                            <h3 class="work-name">WSB Stock Tracker</h3>
+                            <p class="work-tagline">What Reddit&apos;s talking about, in real time.</p>
+                            <p class="work-desc">
+                                Tracks the top tickers and crypto-currencies surfaced on r/wallstreetbets,
+                                r/pennystocks, and r/cryptocurrency.
+                            </p>
+                            <ul class="work-tags">
+                                <li>Ionic</li>
+                                <li>Express</li>
+                                <li>DigitalOcean</li>
+                            </ul>
+                            <a href="https://wsbstocktracker.com" target="_blank" rel="noopener" class="work-link">
+                                wsbstocktracker.com <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </article>
 
                     </div>
-                </div>
+                </section>
 
-                <div data-scroll class="full-height resume-experience mobile-experience" id="mobile-experience">
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-building"></i>
+                <!-- ─── Education ─────────────────────────────────────────────── -->
+                <section id="education" class="section resume-education" data-reveal>
+                    <p class="mono-label hide-pdf">/ education</p>
+                    <h3 class="resume-block-header section-title-screen">Education</h3>
+
+                    <div class="row education-row education-row-screen">
+                        <div class="col-3">
+                            <div class="date">2015</div>
                         </div>
+                        <div class="col-9">
+                            <div class="row">Louisiana State University</div>
+                            <div class="row">Bachelors Degree in Computer Science with a concentration in Software Development</div>
+                            <div class="row">Baton Rouge, LA 70803</div>
+                        </div>
+                    </div>
 
-                        <h3 class="resume-block-header resume-block-header-work-experience">Work Experience</h3>
+                    <div class="row education-row education-row-screen">
+                        <div class="col-3">
+                            <div class="date">2007</div>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">Brother Martin Catholic High School</div>
+                            <div class="row">4401 Elysian Fields Ave, New Orleans, LA 70122</div>
+                        </div>
+                    </div>
+                </section>
 
-                        <div id="mobile-experience-leviton">
+                <!-- ─── Experience ────────────────────────────────────────────── -->
+                <section id="experience" class="section experience-section" data-reveal>
+                    <p class="mono-label hide-pdf">/ experience</p>
+                    <h3 class="resume-block-header section-title-screen">Work Experience</h3>
 
+                    <div class="resume-experience mobile-experience" id="mobile-experience">
+
+                        <article id="mobile-experience-leviton" class="exp-block">
                             <div class="job-name">
                                 Leviton Manufacturing Co Inc, New Orleans, La
                             </div>
-
-                            <div class="job-time">
-                                May 2015 - present
-                            </div>
+                            <div class="job-time">May 2015 &mdash; present</div>
 
                             <div class="job-title">
-                                <div>
-                                    Senior Software Engineering Manager (App, Cloud, UX, and QA)
-                                </div>
-                                <div class="job-time">
-                                    <i>[2020 - present]</i>
-                                </div>
+                                <div>Senior Software Engineering Manager (App, Cloud, UX, and QA)</div>
+                                <div class="job-time"><i>[2020 &mdash; present]</i></div>
                             </div>
-
-                            <p class="job-description">
-
-                            <ul>
-                                <li>
-                                    Led 4 separate teams spanning residential, commercial and industrial applications. Teams consisted of 12 Software Engineers, 2 UX Designers, 1 cloud Infrastructure Manager,
-                                    and 2 QA Testers.
-                                </li>
-                                <li>
-                                    Responsible for Personnel, Planning, Process, and Reporting on the Management side.</li>
-                                </li>
-                                <li>
-                                    Responsible for Architecture, Orchestration, and Execution on the Software side.
-                                </li>
-                                <li>
-                                    Spearheaded Leviton's AI initiative to bring AI development expertise into the company by designing internal business tools and customer facing services.
-                                </li>
-                                <li>
-                                    Managed and developed Leviton's paramount smart device ecosystem My Leviton.
-                                    Consisting of mobile/web application, various 3rd party partnerships, and enterprise cloud services with over 1 million users
-                                    and several millions of devices sold.
-                                </li>
-                                <li>
-                                    5-15% hands-on coding with the technologies listed below.
-                                </li>
-                            </ul>
-                            </p>
-
-                            <div class="job-title">
-                                <div>
-                                    Software Engineering Manager (App & Cloud)
-                                </div>
-                                <div class="job-time">
-                                    <i>[2018 - 2020]</i>
-                                </div>
-                            </div>
-
                             <p class="job-description">
                             <ul>
                                 <li>
-                                    Led a team of 8 Software Engineers, 1 UX Designer, 1 cloud Infrastructure Manager,
-                                    and 2 QA Testers.
+                                    Led 4 separate teams spanning residential, commercial and industrial
+                                    applications. Teams consisted of 12 Software Engineers, 2 UX Designers,
+                                    1 Cloud Infrastructure Manager, and 2 QA Testers.
                                 </li>
                                 <li>
-                                    10-20% hands-on coding with the technologies listed below.
+                                    Responsible for Personnel, Planning, Process, and Reporting on the
+                                    Management side.
                                 </li>
+                                <li>
+                                    Responsible for Architecture, Orchestration, and Execution on the
+                                    Software side.
+                                </li>
+                                <li>
+                                    Spearheaded Leviton&apos;s AI initiative to bring AI development
+                                    expertise into the company by designing internal business tools and
+                                    customer-facing services.
+                                </li>
+                                <li>
+                                    Managed and developed Leviton&apos;s paramount smart-device ecosystem,
+                                    My Leviton &mdash; mobile/web application, third-party partnerships,
+                                    and enterprise cloud services with over 1 million users and several
+                                    million devices sold.
+                                </li>
+                                <li>5&ndash;15% hands-on coding with the technologies listed below.</li>
                             </ul>
                             </p>
 
                             <div class="job-title">
-                                <div>
-                                    Full Stack Software Engineer
-                                </div>
-                                <div class="job-time">
-                                    <i>[2015 - 2018]</i>
-                                </div>
+                                <div>Software Engineering Manager (App &amp; Cloud)</div>
+                                <div class="job-time"><i>[2018 &mdash; 2020]</i></div>
                             </div>
-
-                            <p>
+                            <p class="job-description">
                             <ul>
                                 <li>
-                                    100% hands-on coding.
+                                    Led a team of 8 Software Engineers, 1 UX Designer, 1 Cloud
+                                    Infrastructure Manager, and 2 QA Testers.
                                 </li>
-                                <li>
-                                    Front-End technologies include: Ionic, Angular, JavaScript, TypeScript, Html,
-                                    CSS/Sass, Swift, Objective-C, Python, Cordova, Capacitor, Bootstrap.
-                                </li>
-                                <li>
-                                    Back-End technologies include: NodeJs, Loopback, Express, MySQL, AWS,
-                                    Bash/Shell, EC2, S3, Lambda, Aurora, ELB, IotCore, SQS, RDS, Elasticache, VPC,
-                                    RESTful APIs, Google APIs.
-                                </li>
-                                <li>
-                                    Other technologies include: Git, svn, Jira, Scrum, Agile, nginx, Apache,
-                                    Bluetooth, Wi-Fi, various other RF protocols, various package managers (npm,
-                                    bower, homebrew, apt, pip, etc.), various Desktop & Mobile Operating Systems
-                                    (including Linux, Windows, MacOs, Android,
-                                    iOS).
-                                </li>
+                                <li>10&ndash;20% hands-on coding with the technologies listed below.</li>
                             </ul>
-
                             </p>
 
-
-                        </div>
-
-                        <div data-scroll id="mobile-experience-xennex">
-
-                            <div>
-
-                                <div class="job-name">
-                                    XenneX LLC (Sole Proprietorship), New Orleans, La
-                                    <span class="hide-pdf">
-                                        - <a href="https://xennex.app" target="_blank">www.xennex.app</a>
-                                    </span>
-                                </div>
-
-                                <div class="job-time">
-                                    2014 - present
-                                </div>
-
-                                <div class="job-title">
-                                    Founder / Full Stack Engineer / Systems Architect
-                                </div>
-
-                                <ul class="project-containers">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            AI Recaps - Launched 2026 -
-                                            <a href="https://airecaps.com" target="_blank">airecaps.com</a>
-                                            <br>
-                                            <small>iOS, Android, Web, PWA</small>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                AI-powered YouTube video summarization service with subscription billing,
-                                                email digests, audio transcription via Groq Whisper, and AI Chat.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NestJS,
-                                                NodeJs, AWS ECS Fargate, S3, CloudFront, RDS, Stripe.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Dealery - Published 2022 -
-                                            <a href="https://dealery.io/app/deals" target="_blank">dealery.io</a>
-                                            <br>
-                                            <small>Web, PWA</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            Dealery is an all-in-one online deal consolidation service that puts all the best deals across the web in one place for your convenience.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                Dealery is an all-in-one online deal consolidation service that puts all
-                                                the best deals across the web in one place for your convenience.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NodeJs, Express, Loopback, Lambda, EC2,
-                                                Elastic Beanstalk, ELB, nginx, S3, bash, MySQL.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Unobtainium - Published 2021 -
-                                            <a href="https://unobtainium.app" target="_blank">www.unobtainium.app</a>
-                                            <br>
-                                            <small>Android, Web, PWA</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            A stock product notification service to help customers beat the scalpers and-->
-                                        <!--                                            get a hold of the products they desire.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                A stock product notification service to help customers get a hold of
-                                                out-of-stock products and beat the scalpers.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NodeJs, Express, Loopback, Lambda, EC2,
-                                                Digital Ocean Droplet, nginx, bash, MySQL.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            WSB Stock Tracker - Published 2021 -
-                                            <a href="https://wsbstocktracker.com" target="_blank">www.wsbstocktracker.com</a>
-                                            <br>
-                                            <small>Web, PWA</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            The Wall Street Bets stock tracker is a quick tracker app that monitors the-->
-                                        <!--                                            top stock tickers and cryptos talked about from popular Reddit subs-->
-                                        <!--                                            including: r/wallstreetbets, r/pennystocks, r/cryptocurrency.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                The Wall Street Bets stock tracker is a quick tracker app that monitors
-                                                the
-                                                top stock tickers and crypto-currencies talked about from popular Reddit
-                                                subs
-                                                including: r/wallstreetbets, r/pennystocks, r/cryptocurrency.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NodeJs, Express, Digital Ocean Droplet,
-                                                nginx, bash.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Game Night - Published 2021 -
-                                            <a href="https://play.google.com/store/apps/details?id=io.xennex.gamenight"
-                                               target="_blank">Available on Google Play</a>
-                                            <br>
-                                            <small>Android</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            Game Night is a fun adult oriented drinking game made to help get the party-->
-                                        <!--                                            started. Play it with your friends, family, or strangers we have a rule-set-->
-                                        <!--                                            for everybody 21 and over.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                Game Night is a fun adult oriented card game made to help get the party
-                                                started. Play it with your friends, family, or strangers we have a
-                                                rule-set
-                                                for everyone 21 and over.
-                                            </li>
-                                            <li>Over 100,000 downloads.</li>
-                                            <li>4.3 stars on Google Play.</li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NodeJs, Loopback, Digital Ocean Droplet,
-                                                nginx, bash, MySQL, Google Sheets API.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Redinfinite - Published 2019 -
-                                            <a href="https://redinfinite.com" target="_blank">www.redinfinite.com</a>
-                                            <br>
-                                            <small>Web, PWA (DISCONTINUED)</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            Redinfinite is an infinite Reddit scroller application. Choose one of the-->
-                                        <!--                                            catered subs or add your own, choose your settings, and with one click of-->
-                                        <!--                                            the button get infinite Reddit content delivered to you in a tinder card-->
-                                        <!--                                            based fashion.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                Redinfinite is an infinite Reddit scroller application. Choose one of
-                                                the
-                                                catered subs or add your own, choose your settings, and with one click
-                                                of
-                                                the button get infinite Reddit content delivered to you in a tinder card
-                                                based fashion.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, NodeJs, Express, Digital Ocean Droplet,
-                                                nginx, bash, MySQL Lite.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Comet - Published 2015 -
-                                            <a href="https://play.google.com/store/apps/details?id=com.XenneX.BCDel89.Comet&hl=en_US&gl=US">
-                                                Available on Google Play
-                                            </a>
-                                            <br>
-                                            <small>iOS, Android</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            A competitive space game where users control a comet and dodge planets to-->
-                                        <!--                                            protect the solar system.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                A competitive space game where users control a comet and dodge planets
-                                                to
-                                                protect the solar system.
-                                            </li>
-                                            <li>
-                                                Technologies include: Lua, Corona SDK.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Rent Buddy - Private Beta 2020
-                                            <!--                                            - -->
-                                            <!--                                            <a href="https://rent-buddy.com" target="_blank">www.rent-buddy.com</a>-->
-                                            <br>
-                                            <small>Android, iOS, Web, PWA (DISCONTINUED)</small>
-                                        </div>
-                                        <!--                                        <p class="job-description">-->
-                                        <!--                                            Rent Buddy is a peer-to-peer rental service app that allows users to connect-->
-                                        <!--                                            and share their tools, un-used items, skills, and services with other people-->
-                                        <!--                                            for cash.-->
-                                        <!--                                        </p>-->
-                                        <ul>
-                                            <li>
-                                                Rent Buddy is a peer-to-peer rental service app that allows users to
-                                                connect and share their tools, un-used items, skills, and services with
-                                                other people for cash.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, Angular, html/Scss/typescript, Back end technologies include: NodeJs, Loopback, GCP, App-Engine,
-                                                Datastore, Compute Engine, Pub/Sub,
-                                                nginx, bash.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Cosmic Crush - Published 2014 -
-                                            <a href="https://m.apkpure.com/cosmic-crush/com.yahoo.BCDel89.CosmicCrush"
-                                               target="_blank">
-                                                Available on ApkPure
-                                            </a>
-                                            <br>
-                                            <small>iOS, Android, Amazon (DISCONTINUED)</small>
-                                        </div>
-                                        <p class="job-description">
-                                            A fun puzzle game where users match gems to earn points and make there way
-                                            through the solar system.
-                                        <ul>
-                                            <li>
-                                                A fun puzzle game where users match gems to earn points and make there
-                                                way
-                                                through the solar system.
-                                            </li>
-                                            <li>
-                                                Technologies include: Lua, Corona SDK.
-                                            </li>
-                                        </ul>
-                                        </p>
-                                    </li>
-                                </ul>
+                            <div class="job-title">
+                                <div>Full Stack Software Engineer</div>
+                                <div class="job-time"><i>[2015 &mdash; 2018]</i></div>
                             </div>
-                        </div>
+                            <p class="job-description">
+                            <ul>
+                                <li>100% hands-on coding.</li>
+                                <li>
+                                    Front-end: Ionic, Angular, JavaScript, TypeScript, HTML, CSS/Sass,
+                                    Swift, Objective-C, Python, Cordova, Capacitor, Bootstrap.
+                                </li>
+                                <li>
+                                    Back-end: Node.js, Loopback, Express, MySQL, AWS, Bash/Shell, EC2, S3,
+                                    Lambda, Aurora, ELB, IoT Core, SQS, RDS, Elasticache, VPC, RESTful APIs,
+                                    Google APIs.
+                                </li>
+                                <li>
+                                    Tooling: Git, SVN, Jira, Scrum, Agile, nginx, Apache, Bluetooth, Wi-Fi,
+                                    various RF protocols, package managers (npm, bower, homebrew, apt, pip).
+                                </li>
+                            </ul>
+                            </p>
+                        </article>
 
-                        <div data-scroll id="mobile-experience-nion">
-
-                            <div>
-
-                                <div class="job-name">
-                                    Nion Lights LLC, New Orleans, La
-                                    <span class="hide-pdf">
-                                        - <a href="https://nionlights.com" target="_blank">nionlights.com</a>
-                                    </span>
-                                </div>
-
-                                <div class="job-time">
-                                    2024 - present
-                                </div>
-
-                                <div class="job-title">
-                                    Co-Founder / Full Stack Developer
-                                </div>
-
-                                <p class="job-description show-pdf">
-                                    Co-founded LED wearable accessories brand for raves, festivals, and EDM culture.
-                                    Handles all software architecture, e-commerce (Shopify/Etsy), firmware configuration, and product development end-to-end.
-                                </p>
-
-                                <ul class="project-containers">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Animated LED Glow Belt - Current Hero Product
-                                            <br>
-                                            <small>Hardware, E-Commerce (Shopify, Etsy)</small>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Co-founded LED wearable accessories brand for raves, festivals, and EDM
-                                                culture. Hero product: Animated LED Glow Belt ($99.99).
-                                            </li>
-                                            <li>
-                                                Technologies include: ESP32, WLED firmware, Shopify, Etsy, 3D Design.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                        <article id="mobile-experience-xennex" class="exp-block">
+                            <div class="job-name">
+                                XenneX LLC (Sole Proprietorship), New Orleans, La
+                                <span class="hide-pdf">
+                                    &mdash; <a href="https://xennex.app" target="_blank" rel="noopener">xennex.app</a>
+                                </span>
                             </div>
-                        </div>
+                            <div class="job-time">2014 &mdash; present</div>
+                            <div class="job-title">Founder / Full-Stack Engineer / Systems Architect</div>
 
-                        <div data-scroll id="mobile-experience-ba">
+                            <ul class="project-containers">
+                                <li>
+                                    <div class="project-name">
+                                        AI Recaps &mdash; Launched 2026 &mdash;
+                                        <a href="https://airecaps.com" target="_blank" rel="noopener">airecaps.com</a>
+                                        <br><small>iOS, Android, Web, PWA</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            AI-powered YouTube video summarization service with subscription
+                                            billing, email digests, Groq Whisper transcription, and AI Chat.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, NestJS, Node.js, AWS ECS Fargate,
+                                            S3, CloudFront, RDS, Stripe.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Dealery &mdash; Published 2022 &mdash;
+                                        <a href="https://dealery.io/app/deals" target="_blank" rel="noopener">dealery.io</a>
+                                        <br><small>Web, PWA</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            All-in-one online deal consolidation service that puts the best
+                                            deals across the web in one place.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Express, Loopback, Lambda,
+                                            EC2, ELB, nginx, S3, MySQL.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Unobtainium &mdash; Published 2021 &mdash;
+                                        <a href="https://unobtainium.app" target="_blank" rel="noopener">unobtainium.app</a>
+                                        <br><small>Android, Web, PWA</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Stock-product notification service to help customers get a hold
+                                            of out-of-stock products and beat the scalpers.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Express, Loopback, Lambda,
+                                            DigitalOcean, nginx, MySQL.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        WSB Stock Tracker &mdash; Published 2021 &mdash;
+                                        <a href="https://wsbstocktracker.com" target="_blank" rel="noopener">wsbstocktracker.com</a>
+                                        <br><small>Web, PWA</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Tracks the top stock tickers and crypto-currencies talked about
+                                            on r/wallstreetbets, r/pennystocks, and r/cryptocurrency.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Express, DigitalOcean,
+                                            nginx.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Game Night &mdash; Published 2021 &mdash;
+                                        <a href="https://play.google.com/store/apps/details?id=io.xennex.gamenight" target="_blank" rel="noopener">Google Play</a>
+                                        <br><small>Android &middot; 100k+ downloads &middot; 4.3&bigstar;</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Adult-oriented card game for getting things started, with rule-sets
+                                            for everyone 21 and over.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Loopback, DigitalOcean,
+                                            MySQL, Google Sheets API.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Redinfinite &mdash; Published 2019
+                                        <br><small>Web, PWA (discontinued)</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Infinite Reddit scroller delivering content from chosen subs in a
+                                            tinder-card UI.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Express, DigitalOcean,
+                                            nginx, MySQL Lite.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Comet &mdash; Published 2015 &mdash;
+                                        <a href="https://play.google.com/store/apps/details?id=com.XenneX.BCDel89.Comet" target="_blank" rel="noopener">Google Play</a>
+                                        <br><small>iOS, Android</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Competitive arcade game where players control a comet and dodge
+                                            planets to protect the solar system.
+                                        </li>
+                                        <li>Technologies: Lua, Corona SDK.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Cosmic Crush &mdash; Published 2014
+                                        <br><small>iOS, Android, Amazon (discontinued)</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Match-3 puzzle game where users match gems to earn points and
+                                            progress through the solar system.
+                                        </li>
+                                        <li>Technologies: Lua, Corona SDK.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project-name">
+                                        Rent Buddy &mdash; Private Beta 2020
+                                        <br><small>Android, iOS, Web, PWA (discontinued)</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Peer-to-peer rental service connecting people with idle items,
+                                            tools, and skills with people who need them.
+                                        </li>
+                                        <li>
+                                            Technologies: Ionic, Angular, Node.js, Loopback, GCP App Engine,
+                                            Datastore, Pub/Sub.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
 
-                            <div>
-
-                                <div class="job-name">
-                                    B&A Technologies
-                                </div>
-
-                                <div class="job-time">
-                                    December 2015 - 2018
-                                </div>
-
-                                <div class="job-title">
-                                    Co-founder/CTO/Lead Full Stack Developer
-                                </div>
-
-                                <p class="job-description show-pdf">
-                                    Co-founded B&amp;A Technologies; served as CTO and lead engineer. Architected and built Zarba, a C2C service marketplace connecting users with local task runners.
-                                </p>
-
-                                <ul class="project-containers">
-                                    <li data-scroll>
-                                        <div class="project-name">
-                                            Zarba - Discontinued 2018
-                                            <br>
-                                            <small>App, Web, PWA</small>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Zarba is a C2C service platform that connects users who need services
-                                                with "Task Runners" who can provide those services.
-                                            </li>
-                                            <li>
-                                                Technologies include: Ionic, AngularJs, Cordova, Lua,
-                                                html/Sass/Javascript, GCP, App-Engine, Datastore, and python.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                        <article id="mobile-experience-nion" class="exp-block">
+                            <div class="job-name">
+                                Nion Lights LLC, New Orleans, La
+                                <span class="hide-pdf">
+                                    &mdash; <a href="https://nionlights.com" target="_blank" rel="noopener">nionlights.com</a>
+                                </span>
                             </div>
-                        </div>
+                            <div class="job-time">2024 &mdash; present</div>
+                            <div class="job-title">Co-Founder / Full-Stack Developer</div>
 
-                        <div data-scroll id="mobile-experience-urs">
-                            <div>
-                                <div class="job-name">
-                                    URS / AECOM, Baton Rouge, La
-                                </div>
+                            <p class="job-description show-pdf">
+                                Co-founded LED wearable accessories brand for raves, festivals, and EDM
+                                culture. Handles all software architecture, e-commerce (Shopify/Etsy),
+                                firmware configuration, and product development end-to-end.
+                            </p>
 
-                                <div class="job-time">
-                                    July 2013 - May-2015
-                                </div>
+                            <ul class="project-containers">
+                                <li>
+                                    <div class="project-name">
+                                        Animated LED Glow Belt &mdash; Hero Product
+                                        <br><small>Hardware, E-Commerce (Shopify, Etsy)</small>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Co-founded LED wearable accessories brand for raves, festivals,
+                                            and EDM culture. Hero product: Animated LED Glow Belt ($99.99).
+                                        </li>
+                                        <li>
+                                            Technologies: ESP32, WLED firmware, Shopify, Etsy, 3D Design.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
 
-                                <div class="job-title">
-                                    Programmer
-                                </div>
-
-                                <p class="job-description">
-                                <ul>
-                                    <li>
-                                        Helped maintain and update a disaster recovery related online application
-                                        storage and processing system.
-                                    </li>
-                                    <li>
-                                        Development & maintenance of the web application included technologies such as:
-                                        C#, Visual Basic, ASP.net, html/CSS/Javascript.
-                                    </li>
-                                    <li>
-                                        Ran reports and optimized database scripts in SQLServer and MySQL.
-                                    </li>
-                                    <li>
-                                        Maintained the iOS front-end application using Objective-C.
-                                    </li>
-                                    <li>
-                                        Other programming tasks included writing scripts written in shell, python, and
-                                        nodeJs, to automate daily tasks and routines.
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                        </div>
+                        <article id="mobile-experience-urs" class="exp-block">
+                            <div class="job-name">URS / AECOM, Baton Rouge, La</div>
+                            <div class="job-time">July 2013 &mdash; May 2015</div>
+                            <div class="job-title">Programmer</div>
+                            <p class="job-description">
+                            <ul>
+                                <li>
+                                    Helped maintain and update a disaster-recovery online application storage
+                                    and processing system.
+                                </li>
+                                <li>
+                                    Web development with C#, Visual Basic, ASP.NET, HTML/CSS/JavaScript.
+                                </li>
+                                <li>Ran reports and optimized database scripts in SQL Server and MySQL.</li>
+                                <li>Maintained the iOS front-end application using Objective-C.</li>
+                                <li>
+                                    Wrote shell, Python, and Node.js scripts to automate daily tasks and
+                                    routines.
+                                </li>
+                            </ul>
+                            </p>
+                        </article>
 
                     </div>
-                </div>
+                </section>
 
-                <div class="empty-block"></div>
-
-                <div class="full-height resume-certifications" id="certifications" data-scroll>
+                <!-- ─── Skills ────────────────────────────────────────────────── -->
+                <section id="skills" class="section pdf-skills-block" data-reveal>
+                    <p class="mono-label hide-pdf">/ skills</p>
                     <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-center resume-block-header">Certifications</h3>
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
-                                     alt="AWS Cloud Practitioner Badge">
-                                <h5>AWS Cloud Practitioner</h5>
-                            </div>
-                            <div class="col-6">
-                                <img src="https://images.credly.com/images/a2790314-008a-4c3d-9553-f5e84eb359ba/image.png"
-                                     alt="Scrum Master">
-                                <h5>Scrum Master</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="show-pdf pdf-skills-block">
-                    <div class="resume-content-container">
-                        <h3 class="resume-block-header">Technical Skills</h3>
+                        <h3 class="resume-block-header section-title-screen">Technical Skills</h3>
                         <table class="pdf-skills-table">
                             <tr>
                                 <td class="pdf-skill-cat">Languages</td>
@@ -1299,387 +661,74 @@
                             </tr>
                         </table>
                     </div>
-                </div>
+                </section>
 
-                <div class="empty-block"></div>
-                <div class="show-pdf pdf-break"></div>
-
-                <div class="full-height resume-languages" id="languages" data-scroll>
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-code"></i>
+                <!-- ─── Certifications ────────────────────────────────────────── -->
+                <section id="certifications" class="section resume-certifications" data-reveal>
+                    <p class="mono-label hide-pdf">/ certifications</p>
+                    <h3 class="resume-block-header section-title-screen">Certifications</h3>
+                    <div class="row certifications-row">
+                        <div class="col-6">
+                            <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+                                 alt="AWS Cloud Practitioner Badge">
+                            <h5>AWS Cloud Practitioner</h5>
                         </div>
-
-                        <h3 class="resume-block-header">Languages & Frameworks</h3>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Javascript
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Typescript
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                NodeJs
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Ionic
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Angular
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Bootstrap
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Sass
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="9" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Bash / zsh
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="8.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Python
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="8" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                MySql
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="8" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Swift
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="7.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Lua
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="7.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Ruby
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="6.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                c#
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="7" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Objective-C
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="7" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                ReactJs
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="7.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Java
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="6.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                        <div data-scroll class="row">
-                            <div class="col-4 col-sm-4 col-lang">
-                                Ruby on Rails
-                            </div>
-                            <div class="col-8 col-sm-8 col-lang-rating">
-                                <bcd-rating rating="6.5" max="10"></bcd-rating>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="empty-block"></div>
-
-                <div class="full-height resume-technology" id="technology" data-scroll>
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-
-                        <h3 class="resume-block-header">Tools & Technologies</h3>
-
-                        <div class="row text-center">
-                            <p data-scroll>
-                                AWS, GCP, Azure,
-                                AI, LLMs, AI Automated Workflows, AI Cloud Infrastructure,
-                                Git, svn,
-                                Docker, Podman, Kubernetes,
-                                Various database solutions (including MySql, MongoDb, PostgreSQL, MariaDb, SQLServer, NoSql, Datastore),
-                                Web Components, Apache, nginx, Wordpress,
-                                Microsoft 365 (Excel, PowerPoint, Word, Teams, Sharepoint, Project),
-                                Vim, Illustrator, Photoshop,
-                                Various Package Managers (including npm, bower, homebrew, apt),
-                                Various Desktop & Mobile Operating Systems (including Linux, Windows, MacOs, Android,
-                                iOS)
-                            </p>
+                        <div class="col-6">
+                            <img src="https://images.credly.com/images/a2790314-008a-4c3d-9553-f5e84eb359ba/image.png"
+                                 alt="Scrum Master Badge">
+                            <h5>Scrum Master</h5>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="empty-block"></div>
-                <div class="show-pdf pdf-break"></div>
+                <!-- ─── Contact ───────────────────────────────────────────────── -->
+                <footer id="contact" class="section footer hide-pdf" data-reveal>
+                    <p class="mono-label">/ contact</p>
+                    <h2 class="section-title">Let&apos;s build something.</h2>
+                    <p class="footer-lede">
+                        Got a project, a stalled product that needs a finisher, or cloud infrastructure
+                        that needs a rethink? I&apos;d love to hear about it.
+                    </p>
 
-                <div class="full-height resume-skills" id="skills" data-scroll>
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-balance-scale-left"></i>
-                        </div>
-
-                        <h3 class="text-center resume-block-header">Skills</h3>
-
-                        <div data-scroll class="row">
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Engineering Management</h4>
-                                    <bcd-rating-circle fraction="true" size="md" rating="9"
-                                                       max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Dev Ops</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Software Architecture</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Agile Development</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Scrum Master</h4>
-                                    <bcd-rating-circle fraction="true" rating="10" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Product Owner</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Web Development</h4>
-                                    <bcd-rating-circle fraction="true" rating="10" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Mobile Development</h4>
-                                    <bcd-rating-circle fraction="true" rating="10" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Firmware Development</h4>
-                                    <bcd-rating-circle fraction="true" rating="6.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Cloud</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Building RESTful APIs</h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Database Admin</h4>
-                                    <bcd-rating-circle fraction="true" rating="8.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>UX Design</h4>
-                                    <bcd-rating-circle fraction="true" rating="7" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Product Innovation</h4>
-                                    <bcd-rating-circle fraction="true" rating="8.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>Leadership</h4>
-                                    <bcd-rating-circle fraction="true" rating="9.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        IT Fundamentals
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="6.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        Project Schedules
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="9.5" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        Team Coordination
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="9" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        Server Management
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="10" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        Networking
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="7.0" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="rating-circle-block">
-                                    <h4>
-                                        RF Protocols (Wi-Fi, BLE, Zigbee)
-                                    </h4>
-                                    <bcd-rating-circle fraction="true" rating="8" max="10"></bcd-rating-circle>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="footer-grid">
+                        <a href="mailto:buddy.delaune@gmail.com" class="footer-card">
+                            <i class="far fa-envelope"></i>
+                            <span class="footer-card-label">Email</span>
+                            <span class="footer-card-value">buddy.delaune@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/buddycdelaune" target="_blank" rel="noopener" class="footer-card">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="footer-card-label">LinkedIn</span>
+                            <span class="footer-card-value">linkedin.com/in/buddycdelaune</span>
+                        </a>
+                        <a href="https://github.com/BCDel89?tab=repositories" target="_blank" rel="noopener" class="footer-card">
+                            <i class="fab fa-github"></i>
+                            <span class="footer-card-label">GitHub</span>
+                            <span class="footer-card-value">github.com/BCDel89</span>
+                        </a>
+                        <a href="https://xennex.app" target="_blank" rel="noopener" class="footer-card">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span class="footer-card-label">Studio</span>
+                            <span class="footer-card-value">xennex.app</span>
+                        </a>
                     </div>
-                </div>
 
-                <div class="empty-block"></div>
+                    <p class="footer-copy">
+                        &copy; 2014&ndash;2026 Buddy C Delaune &middot; Made in New Orleans
+                    </p>
+                </footer>
 
-                <div class="full-height resume-references" id="references" data-scroll>
-                    <div class="resume-content-container">
-                        <div class="user-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+            </main>
 
-                        <h3 class="resume-block-header">References</h3>
+            <button class="print-fab hide-pdf" type="button" onclick="window.print()" aria-label="Print resume">
+                <i class="fas fa-print"></i>
+                <span>Print resume</span>
+            </button>
 
-                        <h4 data-scroll>
-                            References available upon request.
-                        </h4>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>
-</body>
 
+<script src="/bundle.js"></script>
+</body>
 </html>
