@@ -2,93 +2,83 @@ import './main.scss';
 import './pdf.scss';
 import './mobile.scss';
 
-const clearMenuFocus = () => {
-	$('.menu-btn-focused').removeClass('menu-btn-focused');
+// ── Topbar shadow on scroll ────────────────────────────────────────────────
+const topbar = () => {
+  const bar = document.querySelector('.topbar');
+  if (!bar) return;
+  const update = () => bar.classList.toggle('is-scrolled', window.scrollY > 8);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
 };
 
-const handleObserverEvent = (entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			// console.log('entry', entry);
+// ── Reveal on scroll ───────────────────────────────────────────────────────
+const reveal = () => {
+  const targets = document.querySelectorAll('[data-reveal]');
+  if (!targets.length) return;
 
-			const id = entry.target.id;
-			const element = $('#nav-btn-' + id);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
 
-			if (element) {
-				// console.log('element: ', element);
-				clearMenuFocus();
-				element.addClass('menu-btn-focused');
-				// element.focus();
-			}
-
-			if (id.includes('experience')) {
-				$('#nav-btn-experience').addClass('menu-btn-focused');
-				$('.sub-menu').addClass('sub-menu-full');
-			} else {
-				$('#nav-btn-experience').removeClass('menu-btn-focused');
-				$('.sub-menu').removeClass('sub-menu-full');
-			}
-		}
-	})
+  targets.forEach((el) => io.observe(el));
 };
 
-const onScroll = () => {
-	const screenHeight = window.innerHeight;
-	const yAxis = window.scrollY;
+// ── Active section in topbar nav ──────────────────────────────────────────
+const navHighlight = () => {
+  const links = document.querySelectorAll('.topbar-nav a[href^="#"]');
+  if (!links.length) return;
 
-	if (yAxis > (screenHeight - 50)) {
-		const navRightPrint = document.getElementById('nav-right-print');
-		const hasClass = navRightPrint.classList.contains('sticky');
-		if (!hasClass) navRightPrint.classList.add('sticky');
-	} else {
-		const navRightPrint = document.getElementById('nav-right-print');
-		const hasClass = navRightPrint.classList.contains('sticky');
-		if (hasClass) navRightPrint.classList.remove('sticky');
-	}
+  const map = new Map();
+  links.forEach((l) => {
+    const id = l.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) map.set(target, l);
+  });
+
+  if (!map.size) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const link = map.get(entry.target);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach((l) => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+  map.forEach((_, target) => io.observe(target));
 };
 
-const createObservers = () => {
-	let options = {
-		root: null,
-		rootMargin: '0px',
-		threshold: 0.80
-		// threshold: 0.385
-	};
-
-	let observer = new IntersectionObserver((entries, observer) => handleObserverEvent(entries), options);
-
-	observer.observe(document.querySelector('#info'));
-	observer.observe(document.querySelector('#education'));
-	observer.observe(document.querySelector('#experience'));
-	observer.observe(document.querySelector('#experience-leviton'));
-	observer.observe(document.querySelector('#experience-urs'));
-	observer.observe(document.querySelector('#experience-ba'));
-	observer.observe(document.querySelector('#experience-xennex'));
-	observer.observe(document.querySelector('#skills'));
-	observer.observe(document.querySelector('#languages'));
-	observer.observe(document.querySelector('#technology'));
-	observer.observe(document.querySelector('#certifications'));
-	observer.observe(document.querySelector('#references'));
-
-	window.onscroll = onScroll;
+// ── Work card pointer-tracked glow ────────────────────────────────────────
+const workCardGlow = () => {
+  const cards = document.querySelectorAll('.work-card');
+  cards.forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const mx = ((e.clientX - rect.left) / rect.width) * 100;
+      const my = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', `${mx}%`);
+      card.style.setProperty('--my', `${my}%`);
+    });
+  });
 };
 
-// Set things up
-window.addEventListener("load", (event) => {
-	initialize();
-}, false);
-
-
-const initialize = () => {
-	createObservers();
-	ScrollOut({
-		offset: 0
-	});
-
-	$('#covercontainer').addClass('loaded');
-	$('#glasspanelcontent').addClass('loaded');
-	$('.nav').addClass('loaded');
+const init = () => {
+  topbar();
+  reveal();
+  navHighlight();
+  workCardGlow();
 };
 
-
-
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
