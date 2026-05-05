@@ -279,25 +279,32 @@ h1.pdf-title {
 .resume-certifications {
   height: auto;
 
-  .row { text-align: left; }
+  .row { text-align: left; display: block; }
 
-  img {
-    height: 44px;
+  img { display: none !important; }
+
+  .col-6 {
     display: inline-block;
-    margin-bottom: 2px;
-    margin-right: 6px;
-    vertical-align: middle;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0;
+    margin-right: 16px;
+
+    &::after {
+      content: ' \2022';
+      color: $accent;
+      margin-left: 16px;
+    }
+
+    &:last-child::after { content: none; }
   }
 
   h5 {
     font-size: 9px;
     font-weight: 600;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline;
     margin: 0;
   }
-
-  .col-6 { padding: 3px 8px 3px 0; }
 }
 
 // ── Skills block (print-only) ─────────────────────────────────────────────────
