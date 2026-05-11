@@ -412,6 +412,14 @@ button { font: inherit; cursor: pointer; }
   }
 }
 
+.about-headshot {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 2rem;
+  filter: grayscale(20%);
+}
+
 .about-side {
   h3 {
     font-family: var(--font-mono);
